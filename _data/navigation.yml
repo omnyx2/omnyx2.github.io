@@ -1,0 +1,13 @@
+main:
+  - name: about
+    link: /about
+  - name: "study"
+    link: /study
+  - name: "projects"
+    link: /projects/
+  - name: "references"
+    link: /references/
+  - name: "protfolio"
+    link: /portfolio/
+  - name: "Search"
+    link: /search/

@@ -1,0 +1,39 @@
+---
+layout: page
+title: References
+permalink: /references/
+---
+
+<h1>Referebces archive</h1>
+{% assign subject = "" | split: "" %}
+
+{% for post in site.references %}
+  {% assign subject= subject | concat: post.field %}
+{% endfor %}
+
+{% assign subject= subject | sort %}
+{% assign result= subject | uniq %}
+{% assign size = 0 %}
+{% assign t=0 %}
+<ul class="archive">
+{% for temp in subject %}
+  
+  {% if temp == result[t] %}
+    {% assign size=size | plus:1 %}
+  {% else %}
+    <a href="{{ site.baseurl }}/references/{{ result[t] | downcase }}">
+      <li> 
+        <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+      </li>
+    </a>
+    {% assign t= t | plus: 1 %}
+    {% assign size = 1 %}
+  {% endif %}
+  
+{% endfor %}
+  <a href="{{ site.baseurl }}/references/{{ result[t] | downcase }}">
+    <li> 
+      <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+    </li>
+  </a>
+</ul>

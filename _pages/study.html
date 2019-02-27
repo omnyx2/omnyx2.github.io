@@ -1,0 +1,120 @@
+---
+layout: page
+title: Study
+permalink: /study/
+---
+
+<h1>Progamming</h1>
+{% assign subject = "" | split: "" %}
+
+{% for post in site.programming %}
+  {% assign subject= subject | concat: post.field %}
+{% endfor %}
+
+{% assign subject= subject | sort %}
+{% assign result= subject | uniq %}
+{% assign size = 0 %}
+{% assign t=0 %}
+
+<ul class="archive">
+  {% for temp in subject %}
+    
+    {% if temp == result[t] %}
+      {% assign size=size | plus:1 %}
+    {% else %}
+      <a href="{{ site.baseurl }}/study/{{ result[t] | downcase }}">
+        <li> 
+          <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+        </li>
+      </a>
+      {% assign t= t | plus: 1 %}
+      {% assign size = 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if size > 0 %}
+<!-- last element wasn't shown, so add below code to see last elements -->
+  <a href="{{ site.baseurl }}/study/{{ result[t] | downcase }}">
+    <li> 
+      <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+    </li>
+  </a>
+  {% endif %}  
+</ul>
+
+<h1>Math</h1>
+{% assign subject = "" | split: "" %}
+
+{% for post in site.math %}
+  {% assign subject= subject | concat: post.field %}
+{% endfor %}
+
+{% assign subject= subject | sort %}
+{% assign result= subject | uniq %}
+{% assign size = 0 %}
+{% assign t=0 %}
+
+<ul class="archive">
+{% for temp in subject %}
+  
+  {% if temp == result[t] %}
+    {% assign size=size | plus:1 %}
+  {% else %}  
+    <a href="{{site.baseurl}}/{{result[t] | downcase }}">
+      <li>
+        <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+      </li>
+    </a>
+    {% assign t= t | plus: 1 %}
+    {% assign size = 1 %}
+  {% endif %}
+
+{% endfor %}
+  {% if size > 0 %}
+<!-- last element wasn't shown, so add below code to see last elements -->
+  <a href="{{ site.baseurl }}/study/{{ result[t] | downcase }}">
+    <li> 
+      <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+    </li>
+  </a>
+  {% endif %}
+</ul>
+
+<h1>refs</h1>
+{% assign subject = "" | split: "" %}
+
+{% for post in site.refs %}
+  {% assign tsubjects= post.field %}
+  {% assign subject= subject | concat: post.field %}
+{% endfor %}
+
+{% assign subject= subject | sort %}
+{% assign result= subject | uniq %}
+{% assign size = 0 %}
+{% assign t=0 %}
+
+<ul class="archive">
+{% for temp in subject %}
+
+  {% if temp == result[t] %}
+    {% assign size=size | plus:1 %}
+  {% else %}
+    <li>
+      <a href="{{site.baseurl}}/{{result[t] | downcase }}">
+        <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+      </a>
+    </li>
+    {% assign t= t | plus: 1 %}
+    {% assign size = 1 %}
+  {% endif %}
+
+{% endfor %}
+{% if size > 0 %}
+<!-- last element wasn't shown, so add below code to see last elements -->
+  <a href="{{ site.baseurl }}/study/{{ result[t] | downcase }}">
+    <li> 
+      <strong>{{ result[t] }}</strong> <span class="taxonomy__count">{{ size | inspect }}</span>
+    </li>
+  </a>
+  {% endif %}
+</ul>
