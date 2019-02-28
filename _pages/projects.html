@@ -4,30 +4,46 @@ title: Projects
 permalink: /projects/
 ---
 <div class="empty_container"></div>
+
+<script>
+  let colorarray=['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
+		  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+		  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
+		  '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
+		  '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
+		  '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+		  '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
+		  '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+		  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
+      '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+      
+window.onload = () => {
+  var container = document.getElementsByClassName("project_first_comment");
+  for(i=0; i<container.length; i++){
+    container[i].style.background = colorarray[Math.floor(Math.random() * colorarray.length)].toString();
+  };
+}
+  
+
+
+</script>
 <div class="project_supercontainer">
   <div class="project_gallery">
     {% for project in site.projects %}
-    <a href="{{ project.url }}">
-      <div class="project_container">
+    <a href="{{ project.url }}" class="project_container">
+        <div class="project_first_comment">
+          <h6 class="project_text">{{project.project_date}}</h6>
+          <h2 class="project_title">{{ project.project_file_name }}</h2>
+        </div>
 
-          <div class="project_first_comment">
-              <h5 class="project_team_num">{{project.project_team_num}}
-                  <i class="fas fa-user"></i>
-              </h5>
+        <div class="project_image_container"><img src="{{ project.main_image_path }}" alt="{{project.title}}"/></div>
+
+        <div class="project_second_comment">
+            <h5 class="project_team_num">{{project.project_team_num}}
+                <i class="fas fa-user"></i>
+            </h5>
             <h6 class="project_date">{{project.project_date}}</h6>
-            <h4 class="project_title">{{ project.project_file_name }}</h4>
-          </div>
-
-          <div class="project_image_container"><img src="{{ project.main_image_path }}" alt="{{project.title}}"/></div>
-
-          <div class="project_second_comment">
-              <h5 class="project_team_num">{{project.project_team_num}}
-                  <i class="fas fa-user"></i>
-              </h5>
-              <h6 class="project_date">{{project.project_date}}</h6>
-              <h4 class="project_title">{{ project.project_file_name }}</h4>
-          </div>
-      </div>
+        </div>
     </a>
     {% endfor %}
   </div>
