@@ -1,16 +1,15 @@
 ---
-lang: "ko"
-ref: "jekyll, how to use markdown to decorate github blog"
+lang: "en"
+ref: "JavaScript"
 layout: post_relate
 big-title: "programming"
-middle-title: "Jekyll 꾸미기"
-small-title: "gitblog markdown 쓰기"
+javascript
+middle-title: "JavaScript Window and DOM BOM"
+small-title: "JavaScript, Window and DOM, BOM" 
 field:
-  - markdown
-  - kramdown
+  - javascript
 relate:
-  - kramdown
-  - jekyll
+  - javascript 
 toc: true
 toc-head-level-choice: false
 #do this if head level choice is true
@@ -36,18 +35,13 @@ Window object can touch browser. And also Window object have these features
 3. 사용자가 만든 모든 변수를 자신 안에 등록시킵니다.
 4. 마지막으로 이것은 기본 자바스크립트의 자료형, String, Boolean, Object, Number, Function, Array을 포함합니다.
 5. 이것은 확실한 것은 아닙니다만, 위의 특성과 함께 자기 자신을 반환할 수 있다면, window 객체는 1급 객체입니다.
+  
+## DOM(Document Object Model)
+Document object is handling website. Therefore Window object include Document object.
+It is programming interface of HTML and XML document. DOM provide some ways that programming language can be access document. It controlls content in ``<body>``, below is a part of DOM methods
 
-### Documents
-
-Document is handling website. Therefore Window object include Document object.
-
-### DOM(Document Object Model)
-It is programming interface of HTML and XML document. DOM provide some ways that prgramming language can be access to DOM. it controlls content in ``<body>``
-
-
-### BOM(Browser Object Model)
-It's a Browser Object Model which is made for communicating between brower and JS.
-
+Document는 웹사이트를 다루는 오브젝트로써 Window object일부로 생각하면 됩니다. DOM은 HTML과 XML document에 대한 프로그래밍 인터페이스이라고 할 수 있는데요. DOM은 프로그래밍 언어가 document에 접근하여 body내부의 내용을 조작할 수 있습니다.
+아래는 DOM의 메소드들 중 일부의 예시 입니다.
 
 
 ### on scroll Event
@@ -125,3 +119,10 @@ In addition it returns HTML or XML or some kind of things. But, In the most it w
 ### innerHTML Property
 
 Change HTML content of element with id 
+
+## BOM(Browser Object Model)
+It's a Browser Object Model which is made for communicating between brower and JS.
+
+BOM은 자바 스크립트와 브라우저가 통신할 수 있게 해줍니다. favorite이나 주소창 그런것들을 사용할 수 있게 해줍니다. 
+
+
