@@ -6,32 +6,6 @@ layout: post_default
   {% if true %}
   <!-- you can change true to page.toc -->
   <button onclick="OpenSidebar()" id="OpenSidebarButton">Open</button>
-  <script>
-    function screenchange(y) {
-      var sidebar = document.getElementById("sidebar__right");
-      if (y.matches) {
-        // If media query matches
-        sidebar.style.display = "none";
-      } else {
-        sidebar.style.display = "block";
-      }
-    }
-
-    window.onload = function() {
-      var y = window.matchMedia("(max-width: 60em)");
-      screenchange(y); // Call listener function at run time
-      y.addListener(screenchange); // Attach listener function on state changes
-    };
-
-    function OpenSidebar() {
-      var sidebar = document.getElementById("sidebar__right");
-      if (sidebar.style.display === "none") {
-        sidebar.style.display = "block";
-      } else {
-        sidebar.style.display = "none";
-      }
-    }
-  </script>
   <aside
     class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}"
     style="display: block"
@@ -93,3 +67,49 @@ layout: post_default
     </ul>
   </nav>
 </div>
+<script>
+
+  
+    function screenchange(y) {
+      var sidebar = document.getElementById("sidebar__right");
+      if (y.matches) {
+        // If media query matches
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    }
+
+    window.onload = function() {
+      var y = window.matchMedia("(max-width: 60em)");
+      screenchange(y); // Call listener function at run time
+      y.addListener(screenchange); // Attach listener function on state changes
+    }
+
+    function OpenSidebar() {
+      var sidebar = document.getElementById("sidebar__right");
+      if (sidebar.style.display === "none") {
+        sidebar.style.display = "block";
+      } else {
+        sidebar.style.display = "none";
+      }
+    }
+
+    window.onscroll = function() {becomingsticky2()};
+
+        var sidebarright = document.getElementById("sidebar__right");
+        var fixed__right = sidebarright.offsetTop;
+
+        function becomingsticky2() {
+
+          if (window.pageYOffset >= fixed__right) {
+            sidebarright.classList.add("fixed");
+          }
+          else {
+            sidebarright.classList.remove("fixed");
+          }
+        }
+
+
+
+  </script>

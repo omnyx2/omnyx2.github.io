@@ -21,12 +21,15 @@
   transition: 3ms;
   -webkit-transition: 3ms;
   margin-bottom: 50px;
+  box-shadow: 1px 1px 1px 1px #e5e5e5;
+  transition: 0.4s;
 }
 
 #search-box:hover {
   border: solid 1px #e3e3e3;
   background-color: #e3e3e3;
-  
+  box-shadow: 1px 1px 1px 1px #e5e5e5;
+  transition: 0.4s;
 }
 
 

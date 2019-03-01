@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Markup: Image Alignment</title>
+  <meta name="description" content="Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/markup/2013/01/10/markup-image-alignment.html">
+  <link rel="alternate" type="application/rss+xml" title="CODE_ME" href="http://localhost:4000/feed.xml">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&amp;subset=korean" rel="stylesheet">
+</head>
+
+
+  <body>
+    <header class="site-master-header">
+    <div class="site-master-title">
+        <i class="fab fa-cuttlefish" id="master-header-icon"></i>
+        <a class="site-title" href="/">CODE_ME</a>
+        <div class="langbox">       
+            <a class="lang">ko</a>
+            <a class="lang">en</a>
+        </div>
+
+    </div>
+</header>
+      
+    <header class="site-header" id="becomesticky">
+    <script>
+
+
+        document.onscroll = function() {becomingsticky()};
+
+        var navbar = document.getElementById("becomesticky");
+        var navbarsticky = navbar.offsetTop;
+
+        function becomingsticky() {
+          if (window.pageYOffset >= navbarsticky) {
+            navbar.classList.add("sticky");
+          }else{
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">about</a>
+          
+        
+          
+          <a class="page-link" href="/study">study</a>
+          
+        
+          
+          <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+          <a class="page-link" href="/references/">references</a>
+          
+        
+          
+          <a class="page-link" href="/portfolio/">protfolio</a>
+          
+        
+          
+          <a class="page-link" href="/search/">Search</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Markup: Image Alignment</h1>
+    <p class="post-meta"><time datetime="2013-01-10T00:00:00+09:00" itemprop="datePublished">Jan 10, 2013</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let’s get started.</p>
+
+<p><img src="http://localhost:4000/assets/images/image-alignment-580x300.jpg" alt="image-center" class="align-center" /></p>
+
+<p>The image above happens to be <strong>centered</strong>.</p>
+
+<p><img src="http://localhost:4000/assets/images/image-alignment-150x150.jpg" alt="image-left" class="align-left" /> The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is <strong>left aligned</strong>.</p>
+
+<p>As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too. Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thing. Mission accomplished!</p>
+
+<p>And now for a <strong>massively large image</strong>. It also has <strong>no alignment</strong>.</p>
+
+<p><img src="http://localhost:4000/assets/images/image-alignment-1200x4002.jpg" alt="no-alignment" /></p>
+
+<p>The image above, though 1200px wide, should not overflow the content area. It should remain contained with no visible disruption to the flow of content.</p>
+
+<p><img src="http://localhost:4000/assets/images/image-alignment-300x200.jpg" alt="image-right" class="align-right" /></p>
+
+<p>And now we’re going to shift things to the <strong>right align</strong>. Again, there should be plenty of room above, below, and to the left of the image. Just look at him there — Hey guy! Way to rock that right side. I don’t care what the left aligned image says, you look great. Don’t let anyone else tell you differently.</p>
+
+<p>In just a bit here, you should see the text start to wrap below the right aligned image and settle in nicely. There should still be plenty of room and everything should be sitting pretty. Yeah — Just like that. It never felt so good to be right.</p>
+
+<p>And just when you thought we were done, we’re going to do them all over again with captions!</p>
+
+<figure class="align-center">
+  <img src="http://localhost:4000/assets/images/image-alignment-580x300.jpg" alt="" />
+  <figcaption>Look at 580 x 300 getting some love.</figcaption>
+</figure>
+
+<p>The figure above happens to be <strong>centered</strong>. The caption also has a link in it, just to see if it does anything funky.</p>
+
+<figure style="width: 150px" class="align-left">
+  <img src="http://localhost:4000/assets/images/image-alignment-150x150.jpg" alt="" />
+  <figcaption>Itty-bitty caption.</figcaption>
+</figure>
+
+<p>The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is <strong>left aligned</strong>.</p>
+
+<p>As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too. Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thing. Mission accomplished!</p>
+
+<p>And now for a <strong>massively large image</strong>. It also has <strong>no alignment</strong>.</p>
+
+<figure style="width: 1200px">
+  <img src="http://localhost:4000/assets/images/image-alignment-1200x4002.jpg" alt="" />
+  <figcaption>Massive image comment for your eyeballs.</figcaption>
+</figure>
+
+<p>The figure element above has an inline style of <code class="highlighter-rouge">width: 1200px</code> set which should break it outside of the normal content flow.</p>
+
+<figure style="width: 300px" class="align-right">
+  <img src="http://localhost:4000/assets/images/image-alignment-300x200.jpg" alt="" />
+  <figcaption>Feels good to be right all the time.</figcaption>
+</figure>
+
+<p>And now we’re going to shift things to the <strong>right align</strong>. Again, there should be plenty of room above, below, and to the left of the image. Just look at him there — Hey guy! Way to rock that right side. I don’t care what the left aligned image says, you look great. Don’t let anyone else tell you differently.</p>
+
+<p>In just a bit here, you should see the text start to wrap below the right aligned image and settle in nicely. There should still be plenty of room and everything should be sitting pretty. Yeah — Just like that. It never felt so good to be right.</p>
+
+<p>And that’s a wrap, yo! You survived the tumultuous waters of alignment. Image alignment achievement unlocked!</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CODE_ME</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CODE_ME</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>
+              <div class="middle">
+                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="btn" href="https://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a class="btn" href="https://www.google.com">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a class="btn" href="https://github.com/omnyx2">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="btn" href="https://www.youtube.com">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+          </li>
+        </ul>
+      </div>
+    
+     
+      
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
+  </body>
+
+</html>
