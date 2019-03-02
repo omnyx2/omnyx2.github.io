@@ -6,8 +6,7 @@ big-title: "programming"
 middle-title: "making jekyll blog"
 small-title: "start jekyll blog"
 field:
-  - jekyll
-  
+  - jekyll  
 relate: 
   - jekyll
 toc: true

@@ -3,13 +3,12 @@ lang: "en"
 ref: "JavaScript"
 layout: post_relate
 big-title: "programming"
-javascript
 middle-title: "JavaScript Window and DOM BOM"
 small-title: "JavaScript, Window and DOM, BOM" 
 field:
   - javascript
 relate:
-  - javascript 
+  - javascript
 toc: true
 toc-head-level-choice: false
 #do this if head level choice is true
