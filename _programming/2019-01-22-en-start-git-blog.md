@@ -1,10 +1,10 @@
 ---
 lang: "en"
-ref: "start jekyll blog"
+ref: "start jekyll blog for ubuntu"
 layout: post_relate
 big-title: "programming"
 middle-title: "making jekyll blog"
-small-title: "start jekyll blog"
+small-title: "start jekyll blog for ubuntu"
 field:
   - jekyll  
 relate: 
