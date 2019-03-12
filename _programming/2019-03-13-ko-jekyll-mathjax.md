@@ -2,7 +2,7 @@
 lang: "ko"
 ref: "how to use jekyll mathjax"
 layout: post_relate
-big-title: "math"
+big-title: "programming"
 middle-title: "Mathjax를 이용해 Jekyll에 수식넣기"
 small-title: "Mathjaxfmf 이용해 Jekyll에 수식넣기"
 field:
