@@ -41,7 +41,7 @@ $$a + b = c$$
   
 ex2)  
 ``$$\int f(x)~dx$$``  
-$\int f(x)~dx$
+$$\int f(x)~dx$$
   
 
 # Mathjax 축약어 알아보기(mathjax 테이블)
@@ -50,7 +50,7 @@ $\int f(x)~dx$
 |Mathjax      |math         |ex           |
 |:-----------:|:-----------:|:-----------:|
 |+, -         |plus, minus  |$$a+b, a-b$$ |
-|*, /         |mul, divide  |$$a*b, a/b$$ |
+<!-- |*, /         |mul, divide  |$$a*b, a/b$$ |
 |\sum_{}^n    |sigma        |$$\sum_{t=0}^n i^2$$|
 |\frac        |분수          |$${(n^2+n)(2n+1)}{6}$$|
 |\alpha       |alpha        |$$ \alpha $$ |
@@ -60,4 +60,4 @@ $\int f(x)~dx$
 |\omega       |omega        |$$ \omege $$ |
 |\Omega       |omega        |$$ \Omege $$ |
 |\delta       |delta        |$$ \delta $$ |
-|\Delta       |delta        |$$ \Delta $$ |
+|\Delta       |delta        |$$ \Delta $$ | -->
