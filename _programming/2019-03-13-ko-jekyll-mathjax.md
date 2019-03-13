@@ -48,12 +48,12 @@ $$\int f(x)~dx$$
 
 기본적인 사용법을 알아봤다면 이제 어떤 기호를 어떻게 쳐야되는지 알아보도록 하겠습니다. [여기](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)에서 정리함  
   
-| Mathjax      | math         | ex           |  
-|:------------ |:------------:|:------------ |  
-| +, -         | plus, minus  |$$ a+b, a-b $$|  
-| *, /         |mul, divide   |$$a*b, a/b$$   |
-| _            | superscripts |\log_2 x       |
-| ^            |  subscripts  | x_i^2         |
+| Mathjax      | math         | ex            |  
+|:------------ |:------------:|:------------- |  
+| +, -         | plus, minus  |$$ a+b, a-b $$ |  
+| *, /         |mul, divide   |$$ a*b, a/b$$  |
+| _            | superscripts |$$ \log_2 x $$ |
+| ^            |  subscripts  |$$ x_i^2    $$ |
 |\alpha        |alpha         |$$ \alpha $$   |
 |\Alpha        |alpha         |$$ \Alpha $$   |
 |\beta         |beta          |$$ \beta $$    |
@@ -62,6 +62,15 @@ $$\int f(x)~dx$$
 |\Omega        |omega         |$$ \Omega $$   |
 |\delta        |delta         |$$ \delta $$   |
 |\Delta        |delta         |$$ \Delta $$   |
-|\sum          |sigma         |$ \sum_{i=0}^n i^2 $|
+|\sum          |sigma         |$$ \sum_{i=0}^n i^2 $$|
 |\frac         |분수          |$${(n^2+n)(2n+1)}{6}$$|
 |\log          |log           |$$ \log_i^2 x^2 $$|
+|\sqrt         |제곱근        |$$ \sqrt x $$  |
+|\begin{matrix}|matrix        |               |
+|\end{matrix}  |matrix        |$$
+                                   \begin{matrix}
+                                   1 & x & x^2 \\
+                                   1 & y & y^2 \\
+                                   1 & z & z^2 \\
+                                   \end{matrix}
+                               $$               |
