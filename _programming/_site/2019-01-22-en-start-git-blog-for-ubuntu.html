@@ -1,0 +1,85 @@
+<p>Nowadays there are so many tools to make supply resume, But I was hard to decide from so much platforms.</p>
+
+<p>However I determine to use gitblog to show my projects. It’s cool, fast, and strong.</p>
+
+<p>And I need page to explain directly, with out lots of explaination. So in this article, you shoud type every commands and if there’s error give me a comments</p>
+
+<p>we’ll gonna apply theme at nextpost</p>
+
+<h3 id="requirementsshould-be-installed-before">Requirements(should be installed before)</h3>
+
+<p>system: ubuntu<br />
+tools: (git)[https://git-scm.com/book/en/v2]<br />
+     : github id&amp;passward</p>
+
+<h2 id="steps-for-ubuntu">Steps for ubuntu</h2>
+
+<h3 id="set-up-jekyll-in-your-computer">Set up jekyll in your computer</h3>
+<p>It won’t need if you already finshed to setting, just need git blog. If not, you defintly need jekyll on your computer</p>
+
+<ol>
+  <li>Install required dependencies
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ruby-full build-essential zlib1g-dev
+</code></pre></div>    </div>
+  </li>
+  <li>Change ~/.bashrc for blocking install to root user, Put follwing commands in terminal to change ~/.bashrc
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' &gt;&gt; ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div>    </div>
+  </li>
+  <li>Install jekyll:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler 
+</code></pre></div>    </div>
+    <ul>
+      <li>If it says no bundler, then just follow the instruction of terminal.
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> gem install bundler
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="set-up-your-git-blog-floder">Set up your git blog floder</h3>
+<ol>
+  <li>
+    <p>Make dir where you want - username.github.io</p>
+  </li>
+  <li>Goto ~/’dir u want to’/username.github.io, set your blog. you can choose ‘dir u want to’ you want.
+Let’s make basic blog. type,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new .
+</code></pre></div>    </div>
+    <ul>
+      <li>In addition, you can see and check basic blog on you PC. It called as minima
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jeykll serve 
+</code></pre></div>        </div>
+      </li>
+      <li>If it’s not work then use this
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div>        </div>
+        <p>Turn on browser, type localhost:4000</p>
+      </li>
+    </ul>
+  </li>
+  <li>Goto ~/’dir u want to’/username.github.io.
+If you don’t know about setting with git. then go to stay basic of git, we need config, init, push, pull, commit, and add
+site is here
+https://git-scm.com/book/en/v2
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --global core.editor vim
+git init
+git add --all
+git commit -m "text you want!"
+git push
+</code></pre></div>    </div>
+  </li>
+  <li>Goto web browser and type http://username.github.io !
+now you finshed setting git blog.
+next time we will apply theme to you git blog.
+It’s one of the famous theme for git blog.
+under url is stie how to use theme. However I’ll make post. you can go this site or my post
+https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remote-theme-method</li>
+</ol>
+

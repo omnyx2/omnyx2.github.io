@@ -17,15 +17,29 @@ toc-head-level-choice: false
 ---
 # 1.2
 
-## 12
-To prove even function is the set of vector space, we need to check $$ + and \centerdot $$
+## 12.
+To prove even function is the set of vector space, we need to check $$+$$ and $$ \centerdot $$ 
 
-$$
-  let \\
-  \mathrm{t,s} \in  \mathbb{R and f,g is even function} \\
-  \mathrm{f(-t) = -f(t)} \\
+$$ let $$
+$$ \mathrm{t,s} \in  \mathbb{R} $$ and f, g is even function  
   
+  $$ f(-t) = -f(t) $$   
+  
+  $$ f(t) = -f(-t) $$  
+   
+If $$ t, s $$ is $$ \in \mathbb{R} $$ then $$ t + s $$ $$ \in \mathbb{R} $$  
+  
+$$ f(-t-s) = f(-(t+s)) = -f(t+s) $$
 
-    
- 
-$$ 
+And for scalar multiplication, $$ (cf)(t)=c(f(t)) $$
+is trivial
+
+As a Result, even function is the set of vector space is true
+
+## 18.
+
+$$ (a_1, a_2)+(b_1,b_2) = (a_1+b_2,a_2+3b_2) $$
+  
+means
+   
+$$ (a_1, a_2)+\begin{pmatrix}  \end{pmatrix}

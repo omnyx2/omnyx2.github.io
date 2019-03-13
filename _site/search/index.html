@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CODE_ME</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/search/">
+  <link rel="alternate" type="application/rss+xml" title="CODE_ME" href="http://localhost:4000/feed.xml">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&amp;subset=korean" rel="stylesheet">
+</head>
+
+
+  <body>
+    <header class="site-master-header">
+    <div class="site-master-title">
+        <i class="fab fa-cuttlefish" id="master-header-icon"></i>
+        <a class="site-title" href="/">CODE_ME</a>
+        <div class="langbox">       
+            <a class="lang">ko</a>
+            <a class="lang">en</a>
+        </div>
+
+    </div>
+</header>
+      
+    <header class="site-header" id="becomesticky">
+    <script>
+
+
+        document.onscroll = function() {becomingsticky()};
+
+        var navbar = document.getElementById("becomesticky");
+        var navbarsticky = navbar.offsetTop;
+
+        function becomingsticky() {
+          if (window.pageYOffset >= navbarsticky) {
+            navbar.classList.add("sticky");
+          }else{
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">about</a>
+          
+        
+          
+          <a class="page-link" href="/study">study</a>
+          
+        
+          
+          <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+          <a class="page-link" href="/references/">references</a>
+          
+        
+          
+          <a class="page-link" href="/portfolio/">protfolio</a>
+          
+        
+          
+          <a class="page-link" href="/search/">Search</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <form action="/search/" method="get" id="search-form">
+  <label for="search-box" id="search-label">Search</label>
+  <input type="text" id="search-box" name="query" />
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    
+      "programming-2019-01-20-en-javascript": {
+        "title": "En Javascript",
+        "date": "Jan 20, 2019",
+        "author": "",
+        "category": "",
+        "content": "Window object and BOMWindowWindow object is that handling whole browser. Such as tabs, scroll, History etc… Window object can touch browser. And also Window object have these features  It is global object, and parent of all objects  So it can be skip, like window.onscroll() -&gt; just onscroll()  It hold every variable that you made  Finally, it contains basic variable types, String, Boolean, Object, Number, Function, Array  I’m not sure about this but I think that it’s first class citizen윈도우 객체는 브라우저 전체를 다룹니다. 예를 들면 탭, 스크롤, 주소창 등등 브라우저 전부를 다룰 수 있는  객체라 할 수 있습니다. 그리고 또한 아래의 특징을 지닙니다.  모든 객체의 조상이 되는 전역변수입니다.  때문에 윈도우 객체는 생략될 수 있습니다. 다음과 같이 window.onscroll() -&gt; onscroll() 처럼 간단히 쓸수 있습니다.  사용자가 만든 모든 변수를 자신 안에 등록시킵니다.  마지막으로 이것은 기본 자바스크립트의 자료형, String, Boolean, Object, Number, Function, Array을 포함합니다.  이것은 확실한 것은 아닙니다만, 위의 특성과 함께 자기 자신을 반환할 수 있다면, window 객체는 1급 객체입니다.DOM(Document Object Model)Document object is handling website. Therefore Window object include Document object.It is programming interface of HTML and XML document. DOM provide some ways that programming language can be access document. It controlls content in &lt;body&gt;, below is a part of DOM methodsDocument는 웹사이트를 다루는 오브젝트로써 Window object일부로 생각하면 됩니다. DOM은 HTML과 XML document에 대한 프로그래밍 인터페이스이라고 할 수 있는데요. DOM은 프로그래밍 언어가 document에 접근하여 body내부의 내용을 조작할 수 있습니다.아래는 DOM의 메소드들 중 일부의 예시 입니다.on scroll EventExcute a JavaScript when a &lt;div&gt; elements is being scrolled&lt;div&gt; 요소가  스크롤 됬을때 자바스크립트를 실행한다.&lt;div onscroll=\"myFunction()\"&gt;HTML DOM getElementById()This method returns element objects which have specific id valuedocument.getElementById(\"demo\");And we can add attribute by using .function myFunction() {  var x = document.getElementById(\"demo\");  x.style.color = \"red\";}  origin:&lt;p id=\"demo\"&gt;  Click the button to change the color of this paragraph.&lt;/p&gt;&lt;button onclick=\"myFunction()\"&gt;Try it&lt;/button&gt;result:&lt;p id=\"demo\" style=\"color: red;\"&gt;  Click the button to change the color of this paragraph.&lt;/p&gt;&lt;button onclick=\"myFunction()\"&gt;Try it&lt;/button&gt;nodeNameGet the node name of a elepents:for example:&lt;button onclick=\"myFunction()\"&gt;Try it&lt;/button&gt;&lt;p id=\"demo\"&gt;&lt;/p&gt;&lt;script&gt;function myFunction() {  var x = document.documentElement.nodeName;  document.getElementById(\"demo\").innerHTML = x;}&lt;/script&gt;sresult:PdocuemntElement PropertyReturn the documentElement of the document, as a node name:var x = document.documentElement.nodeName;return:HTMLIn addition it returns HTML or XML or some kind of things. But, In the most it will return HTML.innerHTML PropertyChange HTML content of element with idBOM(Browser Object Model)It’s a Browser Object Model which is made for communicating between brower and JS.BOM은 자바 스크립트와 브라우저가 통신할 수 있게 해줍니다. favorite이나 주소창 그런것들을 사용할 수 있게 해줍니다.",
+        "url": "/programming/2019-01-20-en-javascript/"
+      },
+    
+      "programming-2019-01-20-ko-markdown-in-jekyll-post": {
+        "title": "Ko Markdown In Jekyll Post",
+        "date": "Jan 20, 2019",
+        "author": "",
+        "category": "",
+        "content": "github blog Markdown 사용하기post를 예쁘게 꾸미는 법사실 당신이 이미 github blog를 쓰는로 결정한 순간 Markdown을 사용해야만 하며, markdown만으 이미 포스트를 예쁘게 쓰는것은 체념하는 것이 편하다. 마크다운은 어디까지나 plain text(그러니까 메모장)을 읽여들여 Html tag를 자동으로 만들기 때문에, 만약 이 글이 단순히 github blog를 쓰고 싶은 것이 아닌, 디자인적으로 아름답게 만들고 싶다면 재빠르게 뒤로가기를 연타하면된다. 내 개인적인 견해로 markdown언어는 귀찮음과 이쁜 그 사이의 타협을 맞춘것이라 생각한다. 때문에 더욱 예쁘게 만들기 위해서는 html tag와 아래의 마크다운 문법을 섞어 쓰면 된다.basic 마크 다운 사용법기본 마크 다운 사용 법은 그냥 md 확장자의 파일을 만들고, typing을 할 때 특정 기호를 넣어주면 알아서 해당 영역에 형태가(이탈릭체, 볼드체 등) 입혀지는 방법이다. 당장 이해가 안가도 상관없다. 아래에서 어떻게 쓰는지 자세히 설명할 것이다. _이런식으로으로 md 쓰면 된다_이런식으로 md 쓰면 된다jekyll markdown일단 조금 더 추가 설명을 덧붙이자면 jekyll 자체는 markdown만 지원하지 않는다! jeykll의 공식문서에서는 자신들은 Karmdown을 지원한다고 나와있는데, 이는 markdown을 개조하여 추가적인 사용을 가능하게 만든것들이다. 추가적으로 jekyll은 Redcarpet이랑 Custom markdown을 허용해준다. Redcarpet은 코드를 입력할때 색을 입력해주고, Custom markdown은 markdown을 만들게 해준다. 여기서는 Markdown과 post를 만들때 많이쓰는 기능에 대해서만 조금 달아 놓았다. 만약 Kramdown을 건들고 싶으면 링크를 타고 들어가면된다. 다만 이것들은 당신이 프로그래머이며 영어를 잘하지 않을 경우 함부로 건들이지 않는것을 추천한다. 관련자료는 전부 영어이기에.Markdown Cheat sheet tree  Markdown Cheat sheet     \\n, 개행   Header   Empahsis   Lists   Images   Code and SyntxHighlighting   Tables   Blackquotes   lnline HTML   Horizontal Rule   YouTube Videos   content inline  \\n, 개행  Codemarkdown에서는 개행을 하기위해맨끝에 두번 띄워 주어야한다.  markdown에서는 개행을 하기위해  맨끝에 두번 띄워 주어야한다.  markdown에서는 개행을 하기위해맨끝에 두번 띄워 주어야한다.    Showmarkdown에서는 개행을 하기위해맨끝에 두번 띄워 주어야한다.markdown에서는 개행을 하기위해  맨끝에 두번 띄워 주어야한다.markdown에서는 개행을 하기위해맨끝에 두번 띄워 주어야한다.주의할점 엔터하고 2번띄워주면 한줄이 비고 띄워지고, 문장의 마지막에 두번띄우면 개행이된다. 그렇다면 엔터를 누르고 2번 띄워주기를 반복하면 계속 띄워질까? 아니다. 이점을 명심해야한다. 두줄을 띄우고 싶다면 &lt;br&gt; 태크를 이용하도록하다.Headers  CodeH2------H1======It's just diffrenct expressions of same result h1, h2# H1## H2### H3#### H4##### H5###### H6  ShowH1H2——It’s just diffrenct expressions of same result h1, h2H1H2H3H4H5H6주의할점 이 # 테그는 반드시 앞쪽에 여백을 두면 출력되지 않음을 기억해야 한다.Empahsis  Code이탈릭체, *italics* _italics*,볼드체,   **blod**  __blog__,섞어쓰기, **mix _them_ together**선긋기,   ~~Strikethrough~~  Show이탈릭체, italics _italics*,볼드체,   blod  blog,섞어쓰기, mix them together선긋기,   StrikethroughLists  Code1. list1  1. 하하!  + list22. list3    1. 호호!  2. 히히@  - list4야    + 야야3. list5  * list6  Show  list1  하하!          list2        list3  호호!  히히@          list4야                  야야                      list5          list6      주의할점기본 markdown view에서는 정상적을 안보인다. 또한 +,-,*가 jekyll markdown에서는 구별된다. 마지막으로 이 태그는 들여쓰기 위해서는 앞의 2컨 띄어쓰기를 반드시 해야한다.Images  Code이미지의 경우 2가지 방식을 가져 올 수 있다. 첫 번째가 Inline-style이다.Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")두번째로는 Reference-style이 있다.Reference-style:![alt text][logo][logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 2\"  Show이미지의 경우 2가지 방식을 가져 올 수 있다. 첫 번째가 Inline-style이다.Inline-style:두번째로는 Reference-style이 있다.Reference-style:주의할점이미지를 작업할 때 자신의 블로그 파일 내에서 상대경로를 통해서하는 것을 권장한다.그 까닭은 PC작업환경과 github의 작업환경이 다르기 때문에 경로가 다를경우,미처 확인 하지 못한 문제가 발생할 수 있기 때문이다.  Code and SyntxHighlighting  Code```$ sudo vi ~/.bashrc``````javascriptvar s = \"JavaScript syntax highlighting\";alert(s);``` ```pythons = \"Python syntax highlighting\"print s``` ```No language indicated, so no syntax highlighting. But let's throw in a tag.```  Show$ sudo vi ~/.bashrcvar s = \"JavaScript syntax highlighting\";alert(s);s = \"Python syntax highlighting\"print sNo language indicated, so no syntax highlighting. But let's throw in a &lt;b&gt;tag&lt;/b&gt;.주의할점이러한 Syntax Highlighting 기능은 Markdown에서 지능되는 기능이 아님을 명심하자. 이러한 기능은, renderer에서 추가적으로 지원하는 것임을 명심하자. 여기서는 jekyll의 renderer로 생각된다. 가능한 모든 하이라이트의 종류는 다음과 같다. compelet listTables  Code:은 columns의 정렬하는데 쓰인다.| Tables        | Are           | Cool  || ------------- |:-------------:| -----:|| col 3 is      | right-aligned | $1600 || col 2 is      | centered      |   $12 || zebra stripes | are neat      |    $1 |테이블을 만들때 반드시 각 header cell 별로 3개 이상의 dash가 필요하다.(---)가장 양옆에 있는 pipe는(|) 선택사항이다. 또한 내부에 inline markdown을 사용할 수 있다.Markdown | Less | Pretty--- | --- | ---*Still* | `renders` | **nicely**1 | 2 | 3  Show            Tables      Are      Cool                  col 3 is      right-aligned      $1600              col 2 is      centered      $12              zebra stripes      are neat      $1      테이블을 만들때 반드시 각 header cell 별로 3개 이상의 dash가 필요하다.(—)가장 양옆에 있는 pipe는(|) 선택사항이다. 또한 내부에 inline markdown을 사용할 수 있다.Markdown | Less | Pretty— | — | —Still | renders | nicely1 | 2 | 3주의할점 조금 힘들더라도 예쁘게 만들자.. 나중에 후회한다.Blackquotes  Code&gt; 인용구 작성 이렇게하면 안끝나요  &gt; 끝낼려면 이렇게&gt;한칸 띄워주고 개행작업 해주세요  Show  인용구 작성 이렇게하면 안끝나요끝낼려면 이렇게  한칸 띄워주고 개행작업 해주세요주의할점개행 작업은 엔터누르고 스페이스바 2번을 말해요lnline HTML  Codehtml 태그도 사용 가능합니다&lt;dl&gt;  &lt;dt&gt;Definition list&lt;/dt&gt;  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;&lt;/dl&gt;  Show  Definition list  Is something people use sometimes.  Markdown in HTML  Does *not* work **very** well. Use HTML tags.주의할점다만 내부에서는 **,*과 같은 Markdown은 제대로 동작하지 않습니다.Horizontal Rule  Code이런것도---가능***하답니다___  Show이런것도가능***하답니다___주의할점없어요YouTube Videos  Code&lt;a href=\"http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE\" target=\"_blank\"&gt;&lt;img src=\"http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg\" alt=\"IMAGE ALT TEXT HERE\" width=\"240\" height=\"180\" border=\"10\" /&gt;&lt;/a&gt;  Show  {{  }}와{% %} 를 보여주기이게 큰 문제점이 있는데 일단 jekyll 이 엔진을 자체적으로 빠르게 {{ }} 나 {%  %}를 찾아서 동작시키기 때문에 특수한 태그를 주어야한다. 이것이 골치아픈 점은 code블럭에 넣어도 우선순위에 의해 동작시키게 되기 때문에 원하는대로 할 수 없다.이러한 것을 해결하는데는 2가지 방법이 있다. 하지만 여기서는 하나만 소개 하도록 하겠다.  code {{\"{{ \"}}}}  {{\"{%  \"}}%} 쉽게 풀어보자면 {{\" \"}}를 앞과 뒤로 분리하여 1번{{ 2번}}, 1번{% 2번%}지점에 넣은 방식이다.  show{{ }} {%  %}주의할점이건 마크다운이 아니다.",
+        "url": "/programming/2019-01-20-ko-Markdown-in-jekyll-post/"
+      },
+    
+      "programming-2019-01-22-en-start-git-blog-for-ubuntu": {
+        "title": "En Start Git Blog For Ubuntu",
+        "date": "Jan 22, 2019",
+        "author": "",
+        "category": "",
+        "content": "Nowadays there are so many tools to make supply resume, But I was hard to decide from so much platforms.However I determine to use gitblog to show my projects. It’s cool, fast, and strong.And I need page to explain directly, with out lots of explaination. So in this article, you shoud type every commands and if there’s error give me a commentswe’ll gonna apply theme at nextpostRequirements(should be installed before)system: ubuntutools: (git)[https://git-scm.com/book/en/v2]     : github id&amp;passwardSteps for ubuntuSet up jekyll in your computerIt won’t need if you already finshed to setting, just need git blog. If not, you defintly need jekyll on your computer  Install required dependencies    sudo apt-get install ruby-full build-essential zlib1g-dev        Change ~/.bashrc for blocking install to root user, Put follwing commands in terminal to change ~/.bashrc    echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.bashrcecho 'export GEM_HOME=\"$HOME/gems\"' &gt;&gt; ~/.bashrcecho 'export PATH=\"$HOME/gems/bin:$PATH\"' &gt;&gt; ~/.bashrcsource ~/.bashrc        Install jekyll:    gem install jekyll bundler               If it says no bundler, then just follow the instruction of terminal.         gem install bundler                    Set up your git blog floder      Make dir where you want - username.github.io    Goto ~/’dir u want to’/username.github.io, set your blog. you can choose ‘dir u want to’ you want.Let’s make basic blog. type,    jekyll new .              In addition, you can see and check basic blog on you PC. It called as minima        jeykll serve                     If it’s not work then use this        bundle exec jekyll serve                Turn on browser, type localhost:4000              Goto ~/’dir u want to’/username.github.io.If you don’t know about setting with git. then go to stay basic of git, we need config, init, push, pull, commit, and addsite is herehttps://git-scm.com/book/en/v2    git config --global user.name \"John Doe\"git config --global user.email johndoe@example.comgit config --global core.editor vimgit initgit add --allgit commit -m \"text you want!\"git push        Goto web browser and type http://username.github.io !now you finshed setting git blog.next time we will apply theme to you git blog.It’s one of the famous theme for git blog.under url is stie how to use theme. However I’ll make post. you can go this site or my posthttps://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remote-theme-method",
+        "url": "/programming/2019-01-22-en-start-git-blog-for-ubuntu/"
+      },
+    
+      "programming-2019-01-22-ko-jekyll-markdown": {
+        "title": "Ko Jekyll Markdown",
+        "date": "Jan 22, 2019",
+        "author": "",
+        "category": "",
+        "content": "////https://jekyllrb.com/docs/configuration/markdown/  번역을 시작하며gitblog에서 쓰는 markdown option에 대해서 정리해 보았다. gitblog에서는 jekyll을 메인 엔진으로 사용하는데 문제는 이 jekyll은 markdown이 아닌 kramdown을 쓴다. 간략히 말하자면 kramdown은 markdown의 개조판이라 생각할 수 있을 것이다. 종종 기울여진 글꼴은 이해하기 힘든 용어를 풀어낸 것이다. 만약 더 이해가 안된다면 추가로 질문을 하면될 듯 싶다.Markdown OptionsJekyll에서는 다양한 Markdown renderer를 지원한다. 때로는 이외에도 추가 option을 적용할 수 있다.renderer는 Markdown으로 작성된 파일을 읽어들여 페이지를 만들어 주는 것이라 생각하면된다. option은 markdown에서 사용가능한 기호를 말한다KramdownKramdown은 Jekyll의 기본 Markdown renderer이다. 아래의 리스트는 연제 Kramdown에서 지원 되는 option들 이다.  auto_id_prefix - header IDs 자동적으로 생성하는데 사용하는 Prefix(접두사)이다.  auto_id_stripping - 자동 ID 생성을 위해 header text에서 모든 서식을(formatting) 제거한다.  auto_ids - header ID를 자동으로 생성할때 쓰인다  coderay_bold_every -:em. If html_to_native is true",
+        "url": "/programming/2019-01-22-ko-jekyll-markdown/"
+      },
+    
+      "programming-2019-02-26-en-making-blog-project0": {
+        "title": "En Making Blog Project0",
+        "date": "Feb 26, 2019",
+        "author": "",
+        "category": "",
+        "content": "////https://jekyllrb.com/docs/configuration/markdown/Lay out my blog’s sturcturebefore start making blog, you should think sturcture of your blog. Without plan, youg blog will going to collapse.Now I’ll show you that design of my blogAt blog page a.k.a front-end/index.html(main.page) |-study   /study categories archive     |-programming     |-math     |-refs summary  |-projects   /projects gallery     |-projects.. |-references   /references categories archive |-portfoliofile structure /root  - index.html  - protfolio.html  - about.html    /study(making pages for each categoryies or posts)  /programming(only for posts)  /math(only for posts)  /refs(only for posts)  /projects    - index.html    - other projects file  /refs    - translatedIt will be hard to understand, but don’t try to understand, just catch the thing that you should design sturcture before you build your own blog.",
+        "url": "/programming/2019-02-26-en-making-blog-project0/"
+      },
+    
+      "programming-2019-02-26-en-making-blog-project1": {
+        "title": "En Making Blog Project1",
+        "date": "Feb 26, 2019",
+        "author": "",
+        "category": "",
+        "content": "Before making jekyll blogbefore Starting make a own blog, you should know about those things.  Collections  permalink  Liquid  YAML  basic HTML, CSS, little bit of SCSS  understanding of hole jekyll system  bit of Gemspec aknowlegebut don’t be afraid, I’ll gonna explain for necessary things at another pages. Goto link and study it!Make jekyll blogbefore start making blog. we’ll build blog on minmatype this:jekyll new &lt;yourblogname&gt;I typed jekyll new  makeblogThis will make much easlier to bulid basic struct of blog.analyze index.htmlWhen you decided to making your own blog, you want to chang header of page.//give header img hereThen you need to see index.html and layouts, Which is the starting page of the webpage. You will know that index.html is the first recognition when  user came in. It’s in root page(maybe html file not in there, instead md file may exist, then chang md to html)now, Let’s go to index.html or index.md file at there it should be looks like this---layout: default---&lt;div class=\"home\"&gt;  &lt;h1 class=\"page-heading\"&gt;Posts&lt;/h1&gt;  &lt;ul class=\"post-list\"&gt;    {% for post in site.posts %}      &lt;li&gt;        &lt;span class=\"post-meta\"&gt;{{ post.date | date: \"%b %-d, %Y\" }}&lt;/span&gt;        &lt;h2&gt;          &lt;a class=\"post-link\" href=\"{{ post.url | prepend: site.baseurl }}\"&gt;{{ post.title }}&lt;/a&gt;        &lt;/h2&gt;      &lt;/li&gt;    {% endfor %}  &lt;/ul&gt;  &lt;p class=\"rss-subscribe\"&gt;subscribe &lt;a href=\"{{ site.baseurl }}/feed.xml\"&gt;via RSS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;You can notice that {% for post in stie.posts%}  is showing. As I told you this is Liquid. Liquid allows you to use for, if etc,, in html file. (here is some reference)[https://shopify.github.io/liquid/]However, this is the Liquid that pull out html and md files in /_posts. It’s not the header, then where is it?analyze defaultAt the top you can see default, It a (Front Matter)[https://jekyllrb.com/docs/front-matter/]. It’s kind of yaml, if you don’t know yaml, then just know that is pointing some html file’s name.Go to _layouts, now you can see default.html.&lt;!DOCTYPE html&gt;&lt;html&gt;  {% include head.html %}  &lt;body&gt;    {% include header.html %}    &lt;div class=\"page-content\"&gt;      &lt;div class=\"wrapper\"&gt;        {{ content }}      &lt;/div&gt;    &lt;/div&gt;    {% include footer.html %}  &lt;/body&gt;&lt;/html&gt;In here, there is no Front Matter. Witch is coverd with --- this. But {% include %} liquid makes containing some files from _includes.In addition, {{ context }} is the context of caller file, I mean index.html’s contextanalyze head and header fileSo now, we came far way from start. we have two choices, one is head.html, the other is header.html.You can guess within &lt;body&gt; tag, that will exist in header.html. because if it’s in &lt;head&gt; tag, we can’t see them.Here is header.html file&lt;header class=\"site-header\"&gt;  &lt;div class=\"wrapper\"&gt;    &lt;a class=\"site-title\" href=\"{{ site.baseurl }}/\"&gt;{{ site.title }}&lt;/a&gt;    &lt;nav class=\"site-nav\"&gt;      &lt;a href=\"#\" class=\"menu-icon\"&gt;        &lt;svg viewBox=\"0 0 18 15\"&gt;          &lt;path fill=\"#424242\" d=\"M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z\"/&gt;          &lt;path fill=\"#424242\" d=\"M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z\"/&gt;          &lt;path fill=\"#424242\" d=\"M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z\"/&gt;        &lt;/svg&gt;      &lt;/a&gt;      &lt;div class=\"trigger\"&gt;        {% for my_page in site.pages %}          {% if my_page.title %}          &lt;a class=\"page-link\" href=\"{{ my_page.url | prepend: site.baseurl }}\"&gt;{{ my_page.title }}&lt;/a&gt;          {% endif %}        {% endfor %}      &lt;/div&gt;    &lt;/nav&gt;  &lt;/div&gt;&lt;/header&gt;&lt;a class=\"site-title\" href=\"/\"&gt;CODE_ME&lt;/a&gt;This is a part from header.html, also it’s making title of blog.// your awsome title picture  If you don’t know yaml or struct of blog you’ll wender what is site.title, it is in _config.yml file, named with title. And site.baseurl means localhos:4000/ or username.github.io/.  And If you also don’t know about | and prepend, it is just append site.baseurl at front of my_page.url. site.pages is name of collections, name with _pages. To understand here you should read page of (collection in jekyll)[https://jekyllrb.com/docs/collections/] or following (step by step ref)[https://jekyllrb.com/docs/step-by-step/01-setup/], because It’s very hard to explain all in this page.&lt;nav&gt; the block that we wanted to find. This makes header. so now I wanna make header with navigation.yml. To do this, make _data at root,At inside, write navigation.yml.navigation.yml:main:  - name: about    link: /about/  - name: \"study\"    link: \"/study/\"  - name: \"projects\"    link: \"/projects/\"  - name: \"references\"    link: \"/references/\"header.html:          &lt;a class=\"page-link\" href=\"/about\"&gt;&lt;/a&gt;              &lt;a class=\"page-link\" href=\"/study\"&gt;&lt;/a&gt;              &lt;a class=\"page-link\" href=\"/projects/\"&gt;&lt;/a&gt;              &lt;a class=\"page-link\" href=\"/references/\"&gt;&lt;/a&gt;              &lt;a class=\"page-link\" href=\"/portfolio/\"&gt;&lt;/a&gt;              &lt;a class=\"page-link\" href=\"/search/\"&gt;&lt;/a&gt;      // put title imgPage hearder is changed, but not finished you should make page with permalink to connect above navigation.yml file. To achive this, create file what ever you wants, and add below in Front matter.---permalink: /about/---Then when you click about jekyll will find page that have permalink: /about/we’ll make all main pages of study, projects, references at next time",
+        "url": "/programming/2019-02-26-en-making-blog-project1/"
+      },
+    
+      "programming-2019-02-26-en-making-blog-project2": {
+        "title": "En Making Blog Project2",
+        "date": "Feb 26, 2019",
+        "author": "",
+        "category": "",
+        "content": "make collectionsmake floderIn this post will gonna make collections, collections are the floders. However Jekyll can’t find floder without collections. It means Jekyll only detect file in speacial floders, like _posts, or _layouts. So if you want to clean up posts in each floder that you want, you should make coleections.As I told you I want/root  - index.html  - protfolio.html  - about.html    /study(making pages for each categoryies or posts)  /programming(only for posts)  /math(only for posts)  /refs(only for posts)  /projects    - index.html    - other projects file  /refs    - translatedabove stucture. Therefore create floders, named with _study, _programmings, _math, _refs, _projects, _referencets.Then register collections to _config.yml then you jekyll will detect your collections.open _config.yml, and put below.collections:  study:    output: true    permalink: /:collection/:path/  programming:    output: true    permalink: /:collection/:path/  math:    output: true    permalink: /:collection/:path/  refs:    output: true    permalink: /:collection/:path/  projects:    output: true    permalink: /:collection/:path/  references:    output: true    permalink: /:collection/:path/  In more detail, permalink: /:collection/:path is the special command only work in _config.yml permalink is url of post or page. If you want to know more about it go (here)[https://jekyllrb.com/docs/permalinks/]Then set basic option to each collctions. It also write under above script# Defaultsdefaults:  - scope:      path: \"\"      type: posts    values:      layout: post      author_profile: true      read_time: true      comments: true      share: true      related: true  - scope:      path: \"_pages\"      type: pages    values:      layout: page      author_profile: true  - scope:      path: \"_study\"      type: study    values:      layout: page  - scope:      path: \"_programming\"      type: programming    values:      layout: page     ",
+        "url": "/programming/2019-02-26-en-making-blog-project2/"
+      },
+    
+      "programming-2019-02-26-ko-django-tutorial-0": {
+        "title": "Ko Django Tutorial 0",
+        "date": "Feb 26, 2019",
+        "author": "",
+        "category": "",
+        "content": "설치 환경  ubuntu - liunx  virtualenv 를 이용  python3 사용  Django2.1.7버젼을 설치장고 처음으로 시작하기장고는 파이썬  기반 프레임 워크로 Django를 사용하기 위해서는 python을 설치해야 합니다. 또한 장고 2.0이상의 버젼 에서는 python3 이상을 필수로 사용해야 합니다. 장고를 설치할 때 SQLite라는 경량 데이터 베이스가 있기 때문에 다른 데이터 베이스를 설치할 필요가 없습니다. 다른 데이터 베이스의 사용을 원할 경우 별도의 과정을 거져야 합니다. 이에 대해서는 다른 페이지에서 다루겠습니다. 초심자용의 간단한 설치가 아닌 전문가용의 완벽한 설치를 위해서는 앞의 페이지를 참조하여 DBMS, wsgi를 전부 설정하여 설치하기를 바랍니다.우선 파이썬이 설치되어있는지 확인합시다. 3.x.y가 나오면 됩니다. python --versionNote Jython은 파이썬 3이상의 버전에서는 설치되지 않으므로Django 2.0버전 이상에서는 작동되지 않습니다.가상환경 만들기제가 우분투를 쓰면서 가장걱정하는 부분은 늘 환경이 꼬이거나 망가질 수 있다는 것 입니다. 환경이 꼬인다는 것은 여러 package나 구성환경을 설치하는 도중 dependency 문제가 발생하면 무엇을 설치해야 될지, 무엇을 삭제해야될지 모르는 상황을 말합니다. 물론 제가 이렇게 말하는 것이지, 다른 분들은 다르게 말할 수도 있겠지요. 넘어가서 이러한 문제를 막기위헤서는 가상환경을 사용하는 것을 추천해 드립니다. 가상환경을 이용하여 환경을 분리하고 혹시 각 환경중 문제가 생겼다면, 해당 환경을 삭제하면 되는 일이니까요.그러면 환경을 만들어 보겠습니다.virtualenv가 설치되어있다는 가정하에,$ mkdir &lt;folder name you want&gt;$ cd &lt;folder name you made&gt;$ virtualenv &lt;env name you want&gt;저는 전체 디렉토리의 이름은 serverdjango21로 지었고, env는 venv로 지었습니다.가상환경 실행하기자, 그러면 해당 폴더 방금 mkdir 명령어로 만든 폴더로 들어가 아래의 명령을 쳐서 가상환경을 실행시켜 봅시다.source venv/bin/activate자신의 터미널의 앞쪽에 (venv)younamve과 같이 뜬것이 보이죠?이제 새로 설치된 가상환경에 위에서 한것과 같이 파이썬 버전을 체크하고, 아래의 명령어를 통해 장고를 설치합시다.pip install Django설치가 끝났습니다!",
+        "url": "/programming/2019-02-26-ko-django-tutorial-0/"
+      },
+    
+      "programming-2019-02-26-ko-django-tutorial-1": {
+        "title": "Ko Django_tutorial_1",
+        "date": "Feb 26, 2019",
+        "author": "",
+        "category": "",
+        "content": "제 글은 전부 장고 공식레퍼런스를 참고하여 작성했으며, 그저 보기 조금 쉽게 만들었을 뿐 입니다.설치 환경  ubuntu - liunx  virtualenv 를 이용  python3 사용  Django2.1.7버젼을 설치첫 번째 장고 앱 만들기!저번 포스팅을 통해서 포스트를 수정하셨나요? 하셨다면##",
+        "url": "/programming/2019-02-26-ko-django_tutorial_1/"
+      },
+    
+      "programming-2019-03-13-ko-jekyll-mathjax": {
+        "title": "Ko Jekyll Mathjax",
+        "date": "Mar 13, 2019",
+        "author": "",
+        "category": "",
+        "content": "일반적으로 CS를 접하는 사람은 결국에 수식을 넣을 공간이 필요합니다. 저또한 그러했고, 아마 많은 사람들이 그러했을 것이죠. 그리고 그런사람들을 위해서 jekyll은 수식을 적을수 있는 라이브러리를 지원해 줍니다. 거기에서는 아마 Mathjax가 가장 핫하고, 가장 유명한 라이브러리 입니다.https://www.mathjax.org/Mathjax 블로그에 적용하기Math jax를 블로그에 적용하는 것은 매우 간단합니다._layouts 폴더에서 default나 어디에든 전체 html 태그에서 body태그의 안쪽 어딘가에 아래의 소스를 붙여 넣어 주면 됩니다.&lt;script src=\"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"&gt;&lt;/script&gt;추가적으로 수식이 복사되지 않게 할 SVG 옵션을 적용할수도 있습니다. 자세한 옵션들에 대해서는 공식 홈페이지를 참조하여 원하는 옵션을 적용해 주세요.Mathjax 블로그에 사용하기적용이 완료되었다면 본격적으로 Mathjax를 블로그에 적용해 봅시다. Mathjax를 사용하기 위해서는 수식을 $$로 시작하고 다시 ``$$`로 닫아 주어야 합니다.ex1)a + b = c$$a + b = c$$ex2)$$\\int f(x)~dx$$Mathjax 축약어 알아보기(mathjax 테이블)기본적인 사용법을 알아봤다면 이제 어떤 기호를 어떻게 쳐야되는지 알아보도록 하겠습니다. 여기에서 정리함            Mathjax      math      ex                  +, -      plus, minus                    *, /      mul, divide                    _      superscripts                    ^      subscripts                    \\alpha      alpha                    \\Alpha      alpha                    \\beta      beta                    \\Beta      beta                    \\omega      omega                    \\Omega      omega                    \\delta      delta                    \\Delta      delta                    \\sum      sigma                    \\frac      분수                    \\log      log                    \\sqrt      제곱근                    \\begin{matrix}      matrix      use with below              \\end{matrix}      matrix                    \\begin{pmatrix}      matrix      use with below              \\end{pmatrix}      matrix                    \\begin{Bmatrix}      matrix      use with below              \\end{Bmatrix}      matrix                    \\begin{vmatrix}      matrix      use with below              \\end{vmatrix}      matrix                    \\begin{Vmatrix}      matrix      use with below              \\end{Vmatrix}      matrix                    \\cdots      horizontal                    \\ddots      diagonal                    \\vdots      vertical            ",
+        "url": "/programming/2019-03-13-ko-jekyll-mathjax/"
+      },
+    
+    
+      "math-2019-03-13-linear-algebra": {
+        "title": "Linear Algebra",
+        "date": "Mar 13, 2019",
+        "author": "",
+        "category": "",
+        "content": "1.212.To prove even function is the set of vector space, we need to check  and  and f, g is even functionIf  is  then  And for scalar multiplication, is trivialAs a Result, even function is the set of vector space is true18.means$$ (a_1, a_2)+\\begin{pmatrix}  \\end{pmatrix}",
+        "url": "/math/2019-03-13-linear-algebra/"
+      },
+    
+    
+      "2019-03-13-economy-html": {
+        "title": "Economy",
+        "date": "Mar 13, 2019",
+        "author": "",
+        "category": "",
+        "content": "지역화, 국제화 및 세계화의 개념      지역화지역 내 국간의 경제적 의존성 심화        국제화자율적으로 국내 규범을 국제 규범에 맞춰 국가 간의 경제적 의존성이 확대되는 과정        세계화          지구촌화가 더 정확한 표현: 지구 전체를 하나를 촌락으로 보는 개념      지구차원의 환경 및 빈곤문제를 해결하기 위해서는 전지구적 해결이 필요함(지구촌화라는 개념의 중요성)      경제적 측면에서 국가중심의 경제 체제가 무너지고 단일화된 지구촌 경제를 만들어가기 시작함      경제 통합에 있어서 문화적 공통성이 큰 도움이 된다      Note: 미세먼지미세먼지에 대해서 과학적 증거가 지금 전혀 없음, 한국, 북한, 중국 별로, 몇 퍼센트가 넘어오는지 과학적 데이터가 전혀 없고, 추정치만 있다. 중국 정부에서 자신의 국가에서 나오는 것에 대한 증거를 요구하는데 미세먼지에 대한 데이터가 없어 반박할  수 없는 상태이다. 결국 환경, 상태와 관련되는 문제에 대해서는 국가간의 협력이 필수적이다.참고자료: 2차 대전 후 세계경제질서를 위한 국제 기구      세계은행 World bank, IBRD, 1946년설립, 전후 재건과 후진국 경제 개발을 위한 지원을 담당함              GATI, 1947년 설립 자유 무역을 관정하는 기구로 1995년 WTO로 전환(추후 자세히 배움)      내국인 대우원칙 - 관세를 들이고 수입할 경우, 모든 국제 제품과 동일하게 대우해야 한다. 예를 들면 구매 방식에 대해서 차별(도매상으로만 구매가능)을 두어서는 안된다.      최혜국 대우 원칙 - 뒷부분에서 자세히 나옴      원칙적으로 수량 제한을 원칙으로 둠  - 11조에 의해 관세를 통해서 수입을 제한해도 좋지만 구입 수량 자체를 제한할 수는 없음. 수량의 제한보다 관세의 제한이 훨씬 시장친화적이며, 극복가능한 조건이기 때문이다. 그러나 다음과 같음과 같은 예외에서는 이를 따르지 않아도 된다.                  국가 ~ 찾아서 쓰셈          국내 손실자가 중대한 피해를 입었을때 수량제한이 가능하다          3세계 개발도상국의 경우 산업제한을 위해서 수량제한이 가능하다                    관세인하의 방식을 원칙으로함      세계 각국의 관세를 낮추는데 크게 기여하였다      한국은 가입한 상태      GATI가 처음 등장할 때, 서비스에 대한 거래가 없었기 때문에 이에 대한 조항이 없었고, 이에 대한 규제가 되지 않았다. 또한 너무 규정들이 트렌드를 따라가기에는 문제가 많았고, 조직 자체도 법률적으로 문제가 있었다.      WTO로 승계 되면서 그 범위와 규제가 강화되었는데, 기존에 농산물, 서비스등이 제대로 포함되지 안되었다면, 전환되면서 이런 부분에도 적용되었다.                  국제통화기금(IMF, 1945년 설립) 1997년, 환율 안정과 외환시장의 규제의 철폐를 목적으로함.      환율이 불안정해질 경우 돈을 지원하여 환율의 폭락을 막음      IMF 사태의 경우, 외환위기때 환율안정을 강요 -&gt; 고금리에 의한 수요 축소로 이어지고 경기침체와 높은 실업률 야기 ,비난받음      이 3개의 국제기구 토대하에 Bretton woods 체제 유지      교체 23pzollveren, zoll이 관세, veren이 연맹, 관세연맹 동맹을 의미한다.독일이 최초로 통일된 때는 1870년대이다. 처음의 독일은 너무 많은 영주와 땅이 있었다. 여기서 관세연맹을 맺는데 이것이 독일의 통합에 큰 기여를 했다. 여기서 비스마르크가 중심인물이였다. 프러시아와 독일의 기타 구갇들은 zollveren을 통해 독일은 정치저 통일의 경험과, 공통 관세를 통해 국내의 발전또한 이룰수 있었다. 비스마르크의 소독일 주의가 큰 전략이 되었다.   첫째, 한민족 구각의 친정한 통일은 정치적 통일이 아닌 경제적 통일을 통해서 진행할 수 있다. 둘째, 경제적인 통일을 통해 국민이 납득할 수 있어야한다. 셋째, 납들할 수 있는 방법으로 이루어 져야한다.교제 32p유럽 경제 협력기구, oeec, 2차세계 대전 이후, 국가들이 피폐해 짐으로써 공산주의의 사상이 퍼지기 시작되었다. 그너라 공산주의의 사상은 경제가 어려운 곳에서 확산이 되므로, 미국이 공산주의의 확산을 방지하기 위해 지원해줌으로써 경제의 침체를 막기위해 노력했다.oeec는 추후 oecd로 전환된다. oecd는 자본주의를 추앙하는 클럽이라 생각하면된다. 이런 oecd의 회원국이 되기 위해서는 자본시장을 개방해야된다.(주식시장 채권시장)세계화 촉진요인  무역과 투자의 자유화          무역:      투자: 외환시장 및 자본 시장 개방        경제성장과 소득증대          소득증대 -&gt; 소비수요 증가 -&gt; 수입 증가              차별화된 수요(산업내 무역증가)증가: 다양한 디자인의 자동차, 다양한 종류의 치즈      ",
+        "url": "/2019/03/13/economy.html"
+      }
+      
+    
+  };
+</script>
+<script src="/js/lunr.min.js" charset="utf-8"></script>
+<script src="/js/search.js" charset="utf-8"></script>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CODE_ME</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CODE_ME</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>
+              <div class="middle">
+                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="btn" href="https://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a class="btn" href="https://www.google.com">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a class="btn" href="https://github.com/omnyx2">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="btn" href="https://www.youtube.com">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+          </li>
+        </ul>
+      </div>
+    
+     
+      
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+
+</html>

@@ -1,8 +1,8 @@
 ---
-permalink: /study/django/
+permalink: /study/javascript/
 big-category: programming
-title: Django
-subjects: django
+title: Javascript
+subjects: javascript
 layout: programming_theme
 ---
 
