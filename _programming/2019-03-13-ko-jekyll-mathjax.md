@@ -46,8 +46,18 @@ $\int f(x)~dx$
 
 # Mathjax 축약어 알아보기(mathjax 테이블)
 
-기본적인 사용법을 알아봤다면 이제 어떤 기호를 어떻게 쳐야되는지 알아보도록 하겠습니다.
+기본적인 사용법을 알아봤다면 이제 어떤 기호를 어떻게 쳐야되는지 알아보도록 하겠습니다. [여기](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)에서 정리함
 |Mathjax      |math         |ex           |
 |:-----------:|:-----------:|:-----------:|
 |+, -         |plus, minus  |$$a+b, a-b$$ |
 |*, /         |mul, divide  |$$a*b, a/b$$ |
+|\sum_{}^n    |sigma        |$$\sum_{t=0}^n i^2$$|
+|\frac        |분수          |$${(n^2+n)(2n+1)}{6}$$|
+|\alpha       |alpha        |$$ \alpha $$ |
+|\Alpha       |alpha        |$$ \Alpha $$ |
+|\beta        |beta         |$$ \beta $$  |
+|\Beta        |beta         |$$ \Beta $$  |
+|\omega       |omega        |$$ \omege $$ |
+|\Omega       |omega        |$$ \Omege $$ |
+|\delta       |delta        |$$ \delta $$ |
+|\Delta       |delta        |$$ \Delta $$ |
