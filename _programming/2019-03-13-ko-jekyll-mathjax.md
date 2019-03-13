@@ -66,15 +66,15 @@ $$\int f(x)~dx$$
 |\frac         |분수          |$${(n^2+n)(2n+1)}{6}$$|
 |\log          |log           |$$ \log_i^2 x^2 $$|
 |\sqrt         |제곱근        |$$ \sqrt x $$|
-|\begin{matrix}|matrix        |use with bleow |
+|\begin{matrix}|matrix        |use with below |
 |\end{matrix}  |matrix        |$$ \begin{matrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{matrix} $$|
-|\begin{pmatrix}|matrix        |use with bleow |
+|\begin{pmatrix}|matrix        |use with below |
 |\end{pmatrix}  |matrix        |$$ \begin{pmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{pmatrix} $$|
-|\begin{Bmatrix}|matrix        |use with bleow |
-|\end{Bmatrix}  |matrix        |$$ \begin{Bmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \endB{matrix} $$|
-|\begin{vmatrix}|matrix        |use with bleow |
+|\begin{Bmatrix}|matrix        |use with below |
+|\end{Bmatrix}  |matrix        |$$ \begin{Bmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{Bmatrix} $$|
+|\begin{vmatrix}|matrix        |use with below |
 |\end{vmatrix}  |matrix        |$$ \begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{vmatrix} $$|
-|\begin{Vmatrix}|matrix        |use with bleow |
+|\begin{Vmatrix}|matrix        |use with below |
 |\end{Vmatrix}  |matrix        |$$ \begin{Vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{Vmatrix} $$|
 |\cdots        |horizontal    |$$ \cdots $$   |
 |\ddots        |diagonal      |$$ \ddots $$   |
