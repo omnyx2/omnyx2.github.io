@@ -65,9 +65,17 @@ $$\int f(x)~dx$$
 |\sum          |sigma         |$$ \sum_{i=0}^n i^2 $$|
 |\frac         |분수          |$${(n^2+n)(2n+1)}{6}$$|
 |\log          |log           |$$ \log_i^2 x^2 $$|
-|\sqrt         |제곱근        |$$ \sqrt {x} $$  |
-|\begin{matrix}|matrix        |               |
+|\sqrt         |제곱근        |$$ \sqrt x $$|
+|\begin{matrix}|matrix        |use with bleow |
 |\end{matrix}  |matrix        |$$ \begin{matrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{matrix} $$|
+|\begin{pmatrix}|matrix        |use with bleow |
+|\end{pmatrix}  |matrix        |$$ \begin{pmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{pmatrix} $$|
+|\begin{Bmatrix}|matrix        |use with bleow |
+|\end{Bmatrix}  |matrix        |$$ \begin{Bmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \endB{matrix} $$|
+|\begin{vmatrix}|matrix        |use with bleow |
+|\end{vmatrix}  |matrix        |$$ \begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{vmatrix} $$|
+|\begin{Vmatrix}|matrix        |use with bleow |
+|\end{Vmatrix}  |matrix        |$$ \begin{Vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{Vmatrix} $$|
 |\cdots        |horizontal    |$$ \cdots $$   |
 |\ddots        |diagonal      |$$ \ddots $$   |
 |\vdots        |vertical      |$$ \vdots $$   |
