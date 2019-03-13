@@ -67,10 +67,8 @@ $$\int f(x)~dx$$
 |\log          |log           |$$ \log_i^2 x^2 $$|
 |\sqrt         |제곱근        |$$ \sqrt x $$  |
 |\begin{matrix}|matrix        |               |
-|\end{matrix}  |matrix        |$$
-                                   \begin{matrix}
-                                   1 & x & x^2 \\
-                                   1 & y & y^2 \\
-                                   1 & z & z^2 \\
-                                   \end{matrix}
-                               $$               |
+|\end{matrix}  |matrix        |$$ \begin{matrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \\ \end{matrix} $$|
+|\cdots        |horizontal    |$$ \cdots $$   |
+|\ddots        |diagonal      |$$ \ddots $$   |
+|\vdots        |vertical      |$$ \vdots $$   |
+
