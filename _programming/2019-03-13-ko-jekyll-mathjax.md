@@ -50,15 +50,15 @@ $$\int f(x)~dx$$
   
 | Mathjax      | math         | ex           |  
 |:------------:|:------------:| ------------ |  
-| +, -         | plus, minus  | a+b, a-b |  
-<!-- |*, /         |mul, divide  |$$a*b, a/b$$ |
+| +, -         | plus, minus  |$$ a+b, a-b $$|  
+|*, /         |mul, divide  |$$a*b, a/b$$ |
 |\sum_{}^n    |sigma        |$$\sum_{t=0}^n i^2$$|
 |\frac        |분수          |$${(n^2+n)(2n+1)}{6}$$|
 |\alpha       |alpha        |$$ \alpha $$ |
 |\Alpha       |alpha        |$$ \Alpha $$ |
 |\beta        |beta         |$$ \beta $$  |
 |\Beta        |beta         |$$ \Beta $$  |
-|\omega       |omega        |$$ \omege $$ |
-|\Omega       |omega        |$$ \Omege $$ |
+|\omega       |omega        |$$ \omega $$ |
+|\Omega       |omega        |$$ \Omega $$ |
 |\delta       |delta        |$$ \delta $$ |
-|\Delta       |delta        |$$ \Delta $$ | -->
+|\Delta       |delta        |$$ \Delta $$ |
