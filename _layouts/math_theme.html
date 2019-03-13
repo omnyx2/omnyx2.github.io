@@ -3,8 +3,8 @@ layout: default
 ---
 
 {% assign subtitle = "" | split: "" %}
-{% assign programming = site.programming | where:"field", page.subjects |sort: date %}
-{% for post in programming %}
+{% assign category = site.math | where:"field", page.subjects |sort: date %}
+{% for post in category %}
   {% assign tsubtitle= post.middle-title | split: "," %}
   {% assign subtitle= subtitle | concat: tsubtitle %}
 {% endfor %}
@@ -19,7 +19,7 @@ layout: default
 {% for temp in result %}
   <h2>{{ temp }}</h2>
   <ul class="post-list">
-    {% assign subpost = programming | where:"middle-title", temp |sort: date %} 
+    {% assign subpost = category | where:"middle-title", temp |sort: date %} 
     {% for temp in subpost %}
     <a href="{{ temp.url }}" class="">
       <li class="title">
@@ -40,8 +40,8 @@ layout: default
 
 
 <h2>All posts</h2>
-{% assign programming = site.programming | where:"field", page.subjects |sort: date %}
-{% for temp in programming %}
+{% assign category = site.math | where:"field", page.subjects |sort: date %}
+{% for temp in category %}
 <ul class="post-list">
   <a href="{{ temp.url }}" class="">
     <li class="title">

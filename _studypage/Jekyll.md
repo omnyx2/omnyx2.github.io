@@ -1,7 +1,8 @@
 ---
 permalink: /study/jekyll/
+big-category: programming
 title: Jekyll
 subjects: jekyll
-layout: study_theme
+layout: programming_theme
 ---
 

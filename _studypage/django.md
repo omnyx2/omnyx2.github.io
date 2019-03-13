@@ -1,7 +1,8 @@
 ---
 permalink: /study/django/
+big-category: programming
 title: Django
 subjects: django
-layout: study_theme
+layout: programming_theme
 ---
 

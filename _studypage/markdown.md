@@ -1,7 +1,8 @@
 ---
 permalink: /study/markdown/
+big-category: programming
 title: Markdown
 subjects: markdown
-layout: study_theme
+layout: programming_theme
 ---
 

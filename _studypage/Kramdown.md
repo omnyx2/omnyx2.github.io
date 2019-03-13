@@ -1,7 +1,8 @@
 ---
 permalink: /study/kramdown/
+big-category: programming
 title: Kramdown
 subjects: kramdown
-layout: study_theme
+layout: programming_theme
 ---
 
