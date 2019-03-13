@@ -50,7 +50,7 @@ $$\int f(x)~dx$$
   
 | Mathjax      | math         | ex           |  
 |:------------:|:------------:| ------------ |  
-| +, -         | plus, minus  | $$a+b, a-b$$ |  
+| +, -         | plus, minus  | a+b, a-b |  
 <!-- |*, /         |mul, divide  |$$a*b, a/b$$ |
 |\sum_{}^n    |sigma        |$$\sum_{t=0}^n i^2$$|
 |\frac        |분수          |$${(n^2+n)(2n+1)}{6}$$|
