@@ -213,4 +213,46 @@ and $$c{a_i}_j \in \mathbb{R}$$, $$cX \in A$$
 above three condition it is true.
 
 ## 17.
+If when W is vector space of V then vector addition and scalar multiplication should be follow
+
+So, for some $$x, y \in \mathbb{W}$$, and $$ c \in F$$
+then,
+
+$$ \Longletfarrow  $$
+
+if
+
+$$1) \emptyset \in W (1)$$ 
+
+then, it will not be subspace of vector space V
+because, emptyset is not additive
+So,
+
+$$1) \emptyset \notin W (1)$$
+
+$$2) x+y \in {W} (2)$$ 
+
+$$3) cx  \in {W} (3)$$
+
+it is true
+
+$$ \Longrightfarrow  $$
+
+$$1) 0 \in W \Longrightfarrow \emptyset \notin W (1)$$ 
+
+$$2) x+y \in {W} (2)$$ 
+
+$$3) cx  \in {W} (3)$$
+
+
+By definition of subspace of vector space, it is true
+
+
+W is vector space iff 
+
+$$1)\emptyset \notin W (1)$$ 
+
+$$2) x+y \in {W} (2)$$ 
+
+$$3) cx  \in {W} (3)$$
 
