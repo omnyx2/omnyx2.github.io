@@ -216,9 +216,8 @@ above three condition it is true.
 If when W is vector space of V then vector addition and scalar multiplication should be follow
 
 So, for some $$x, y \in \mathbb{W}$$, and $$ c \in F$$
-then,
-
-$$ \Leftarrow  $$
+then,  
+$$ \Rightarrow  $$
 
 if
 
@@ -234,11 +233,10 @@ $$2) x+y \in {W} (2)$$
 
 $$3) cx  \in {W} (3)$$
 
-it is true
+it is true  
+$$ \Leftarrow $$
 
-$$ \Rightarrow $$
-
-$$1) 0 \in W \Leftarrow \emptyset \notin W (1)$$ 
+$$1) 0 \in W \Rightarrow \emptyset \notin W (1)$$ 
 
 $$2) x+y \in {W} (2)$$ 
 
