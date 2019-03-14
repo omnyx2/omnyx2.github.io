@@ -218,7 +218,7 @@ If when W is vector space of V then vector addition and scalar multiplication sh
 So, for some $$x, y \in \mathbb{W}$$, and $$ c \in F$$
 then,
 
-$$ \Longletfarrow  $$
+$$ \Leftarrow  $$
 
 if
 
@@ -236,9 +236,9 @@ $$3) cx  \in {W} (3)$$
 
 it is true
 
-$$ \Longrightfarrow  $$
+$$ \Rightarrow $$
 
-$$1) 0 \in W \Longrightfarrow \emptyset \notin W (1)$$ 
+$$1) 0 \in W \Leftarrow \emptyset \notin W (1)$$ 
 
 $$2) x+y \in {W} (2)$$ 
 
