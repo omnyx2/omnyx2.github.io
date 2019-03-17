@@ -3,7 +3,7 @@ lang: "ko, en"
 ref: "linear algebra hw 1"
 layout: post_relate
 big-title: "math"
-middle-title: "linear algebra hw 1"
+middle-title: "linear algebra hw"
 small-title: "linear algebra hw 1"
 field:
   - linear-algebra
