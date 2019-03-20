@@ -164,7 +164,7 @@ $$ x = a_1x_1 + \cdots + a_nx_n $$
 $$ x = a_1x_1 + \cdots + a_nx_n $$  
 
 Let,
-= {x_1,\cdots,x_n,y_1,\cdots,y_k}
+  
 $$ 
 \begin{cases}  
 a_1x_1 + \cdots + a_nx_n \in span(S_1)  \\
