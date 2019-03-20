@@ -44,39 +44,39 @@ To show span
 
 $$
 a
-\begin{pmatrix*}
+\begin{pmatrix}
   1 & 0 \\
   -1 & 0 \\ 
-\end{pmatrix*}
+\end{pmatrix}
 +
 b
-\begin{pmatrix*}
+\begin{pmatrix}
   0 & 1 \\
   0 & 1 \\ 
-\end{pmatrix*}
+\end{pmatrix}
 +
 c
-\begin{pmatrix*}
+\begin{pmatrix}
   1 & 1 \\
   0 & 0 \\ 
-\end{pmatrix*}
+\end{pmatrix}
 =
-\begin{pmatrix*}
+\begin{pmatrix}
   1 & 0 \\
   0 & 1 \\ 
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 $$
-\begin{pmatrix*}
+\begin{pmatrix}
   a+c & b+c \\
   -a & b+c \\
-\end{pmatrix*}
+\end{pmatrix}
 =
-\begin{pmatrix*}
+\begin{pmatrix}
   1 & 0 \\
   0 & 1 \\
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 But
