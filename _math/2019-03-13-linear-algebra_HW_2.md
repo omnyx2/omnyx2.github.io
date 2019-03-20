@@ -94,10 +94,37 @@ $$
 So it doesn't span of S
 
 ## 14*. 
-  
-Let 
+$$ \Longrightarrow $$
+Let,
+   
 $$ a, b \in \mathbb{F} $$
 $$ x \in span(S_1 \cup S_2)$$
+    
+then, 
+
+$$ S_1 \cup S_2 = {x_1, x_2, \cdots,x_n,y_1, y_2, \cdots, y_k} $$
+  
+$$ x = a_1x_1 + \cdots + a_nx_n + b_1y_1 + \cdots + b_ky_k $$
+
+$$
+\begin{cases}
+  S_1 = {x_1, x_2, \cdots, x_n} \\
+  S_2 = {y_1, y_2, \cdots, y_k} 
+\end{cases}
+$$
+
+It means
+$$ x \in span(S_1) + span(S_2)  $$
+
+Hence
+$$\Rightarrow span(S_1 \cup S_2) \subseteq span(S_1) + span(S_2) $$
+
+
+$$ \Longleftarrow $$
+Let,
+   
+$$ a, b \in \mathbb{F} $$
+$$ x \in span(S_1) + span(S_2)$$
   
 $$
 \begin{cases}
@@ -105,24 +132,59 @@ $$
   S_2 = {y_1, y_2, \cdots, y_k} 
 \end{cases}
 $$
-  
-then, 
 
-$$ S_1 \cup S_2 = {x_1, x_2, \cdots,x_n,y_1, y_2, \cdots, y_k} $$
-  
 $$ x = a_1x_1 + \cdots + a_nx_n + b_1y_1 + \cdots + b_ky_k $$
 
+However, 
+
+$$ S_1 \cup S_2 = {x_1, x_2, \cdots,x_n,y_1, y_2, \cdots, y_k} $$
+
 It means
-$$ x \in span(S_1) + span(S_2)  $$
+$$ x \in span(S_1 \cup S_2)  $$
 
 thus, $$ span(S_1) + span(S_2) $$
-then $$ span(S_1 \cup S_2) $$ also contain $$ \exists x$$
+then $$ span(S_1 \cup S_2) $$ also contain $$ \exists x $$
 
 Hence
-$$\Longrightarrow span(S_1 \cup S_2)= span(S_1) + span(S_2) $$
+$$\Longrightarrow span(S_1) + span(S_2)  \subseteq span(S_1 \cup S_2) $$
 
+finally
 
-## 15*. 
+$$\Longrightarrow span(S_1) + span(S_2)  = span(S_1 \cup S_2) $$
+## 15*.
+
+Let,
+
+$$ a, b \in \mathbb{F} $$
+$$ x \in span(S_1 \cap S_2)$$
+
+then
+
+$$ x = a_1x_1 + \cdost + a_nx_n $$
+$$ x = a_1x_1 + \cdost + a_nx_n $$  
+
+Let,
+= {x_1,\cdost,x_n,y_1,\cdots,y_k}
+$$ 
+\begin{cases}  
+a_1x_1 + \cdost + a_nx_n \in span(S_1)  \\
+a_1x_1 + \cdost + a_nx_n \in span(S_2)
+\end{cases}
+$$
+
+means,
+
+$$
+\begin{cases}
+  x \in S-1 \\
+  x \in S_2
+\end{cases}
+$$
+
+$$
+\Longrightarrow span(S_1 \cap S_2)  \subseteq span(S_1) \cap span(S_2)
+$$
+
 
 # 1.4 
 
@@ -186,7 +248,7 @@ finally, linearly dependent if and only if u or v is a multiple of the other.
 
 ## 14
   
-$$ W_1 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F}: a_1 - a_2 - a_3 = 0} $$
+$$ {W_1 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F}: a_1 - a_2 - a_3 = 0} $$
   
 So, 
  
@@ -196,7 +258,7 @@ then for $$ a_1, a_3, a_4 $$ we only need two dim, and we need a_2, and a_4, 2 d
 thus we need 4 dim for $$ W_1 $$
 
 
-$$ W_2 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F} : a_1 = a_2 = a_3 = 0, a_1 = -a_5} $$
+$$ {W_2 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F} : a_1 = a_2 = a_3 = 0, a_1 = -a_5} $$
 
 So, 
 
