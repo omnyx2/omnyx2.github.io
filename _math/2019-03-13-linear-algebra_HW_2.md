@@ -117,12 +117,8 @@ $$
    b-c = 0 \cdots(4) \\
   \end{cases}
 $$
-
-$$ 
-  \begin{cases}
-   by (4),(3) b=c=0 then a = 0 if not it will not be zero
-  \end{cases}
-$$
+  
+by (4),(3) b=c=0 then a = 0 if not it will not be zero
 
 so this is linearly indep
 
@@ -164,18 +160,18 @@ finally, linearly dependent if and only if u or v is a multiple of the other.
 # 1.6
 
 ## 14
-
+  
 $$ W_1 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F}: a_1 - a_2 - a_3 = 0} $$
-
+  
 So, 
-
-$$ a_1 = a_3 + a_4 }
-
+ 
+$$ a_1 = a_3 + a_4 $$
+  
 then for $$ a_1, a_3, a_4 $$ we only need two dim, and we need a_2, and a_4, 2 dims
 thus we need 4 dim for $$ W_1 $$
 
 
-$$ W_2 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F}: a_1 = a_2 = a_3 = 0, a_1 = -a_5} $$
+$$ W_2 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F} : a_1 = a_2 = a_3 = 0, a_1 = -a_5} $$
 
 So, 
 
