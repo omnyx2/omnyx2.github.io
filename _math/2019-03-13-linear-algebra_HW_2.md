@@ -93,11 +93,11 @@ $$
 
 So it doesn't span of S
 
-## 14. (I saw solution)
-
+## 14*. 
+  
 
   
-## 15. (I saw solution)
+## 15*. 
 
 # 1.4 
 
@@ -183,3 +183,6 @@ $$ a_1 = a_3 = a_4 =  0 }
 
 then for $$ a_1, a_3, a_4 $$ we only need one dim , and we need 1 dims to determine $$ a_1 or a_5 $$
 thus we need 2 dim for $$ W_2 $$
+
+
+## 22.
