@@ -160,15 +160,15 @@ $$ x \in span(S_1 \cap S_2)$$
 
 then
 
-$$ x = a_1x_1 + \cdost + a_nx_n $$
-$$ x = a_1x_1 + \cdost + a_nx_n $$  
+$$ x = a_1x_1 + \cdots + a_nx_n $$
+$$ x = a_1x_1 + \cdots + a_nx_n $$  
 
 Let,
-= {x_1,\cdost,x_n,y_1,\cdots,y_k}
+= {x_1,\cdots,x_n,y_1,\cdots,y_k}
 $$ 
 \begin{cases}  
-a_1x_1 + \cdost + a_nx_n \in span(S_1)  \\
-a_1x_1 + \cdost + a_nx_n \in span(S_2)
+a_1x_1 + \cdots + a_nx_n \in span(S_1)  \\
+a_1x_1 + \cdots + a_nx_n \in span(S_2)
 \end{cases}
 $$
 
