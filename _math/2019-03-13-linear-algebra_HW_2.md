@@ -94,4 +94,62 @@ So it doesn't span of S
 
 ## 14. (I saw solution)
 
+
+  
 ## 15. (I saw solution)
+
+# 1.4 
+
+## 2-c)
+
+To check linearly independent
+
+$$ a(x^3+2x^2)+b(-x^2+3x+1)+c(x^3-x^2+2x-1) = 0 $$
+
+$$ (a+c)x^3 + (2a-b-c)x^2 + (3b+2c)x + b-c=0 $$
+
+$$ 
+  \begin{cases}
+   a+c = 0 \cdots(1)\\
+   2a-b-c = 0 \cdots(2)\\
+   3b+2c = 0 \cdots(3)\\
+   b-c = 0 \cdots(4) \\
+  \end{cases}
+$$
+
+$$ 
+  \begin{cases}
+   by (4),(3) b=c=0 then a = 0 if not it will not be zero
+  \end{cases}
+$$
+
+so this is linearly indep
+
+## 9
+u, v is different vector in vector space V ,$$a, b \in \mathbb{f}$$
+
+$$ \Longrightarrow $$  
+Show with antithesis  
+Let, if u is not a multiple of the other vector v then u,v is linearly dep  
+Then a, b can't not be 0 in same time to show, Because it means lin indep  
+  
+$$  
+a\vec{v}+b\vec{u} \neq 0 \\  
+a\vec{v}+b\vec{u} = \vec{k} \\  
+$$    
+
+$$ \vec{v} = (-b\vec{u} - \vec{k})/a $$  
+
+Thus, v, u is lin indep   
+
+$$ \Longleftarrow $$  
+when u or v is multiple of the other
+then $$ \vec{v}=a\vec{u} $$ 
+Let,
+
+$$ \vec{v} is 
+
+
+# 1.6
+
+## 14
