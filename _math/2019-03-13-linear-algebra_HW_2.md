@@ -95,8 +95,33 @@ So it doesn't span of S
 
 ## 14*. 
   
-
+Let 
+$$ a, b \in \mathbb{F} $$
+$$ x \in span(S_1 \cup S_2)$$
   
+$$
+\begin{cases}
+  S_1 = {x_1, x_2, \cdots, x_n} \\
+  S_2 = {y_1, y_2, \cdots, y_k} 
+\end{cases}
+$$
+  
+then, 
+
+$$ S_1 \cup S_2 = {x_1, x_2, \cdots,x_n,y_1, y_2, \cdots, y_k} $$
+  
+$$ x = a_1x_1 + \cdots + a_nx_n + b_1y_1 + \cdots + b_ky_k $$
+
+It means
+$$ x \in span(S_1) + span(S_2)  $$
+
+thus, $$ span(S_1) + span(S_2) $$
+then $$ span(S_1 \cup S_2) $$ also contain $$ \exists x$$
+
+Hence
+$$\Longrightarrow span(S_1 \cup S_2)= span(S_1) + span(S_2) $$
+
+
 ## 15*. 
 
 # 1.4 
@@ -175,10 +200,29 @@ $$ W_2 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F} : a_1 = a_2 = a_3 = 0, a_1 = -
 
 So, 
 
-$$ a_1 = a_3 = a_4 =  0 }
+$$ a_1 = a_3 = a_4 =  0 $$
 
 then for $$ a_1, a_3, a_4 $$ we only need one dim , and we need 1 dims to determine $$ a_1 or a_5 $$
 thus we need 2 dim for $$ W_2 $$
 
 
 ## 22.
+
+Let $$ W_1 $$ is subspace of $$ W_2 $$ then,
+  
+  $$ W_1 \cap W_2 = W_1 \Rightarrow dim(W_1 \cap W_2) = dim(W_1) $$
+  
+Next, show  it's necessary condition
+Assume, $$ W_1 $$ is not a subpace of $$ W_2 $$, then $$ \exists x \in W_1 $$ and that $$ x \notin W_2 $$
+
+Let set of $$\exists{x}$$ $$\mathbb{X}$$
+
+then
+
+$$  dim(W_1 \cap W_2) < dim(W_1 \cap W_2) + dim(\mathbb{X}) \leq dim(W_1) $$
+
+Thus, $$ W_1 $$ must be subspace of $$ W_2 $$ to become 
+  
+$$ dim(W_1 \cap W_2) = dim(W_1) $$
+
+So, nessary condition is that $$ W_1 $$ is subspace of $$ W_2 $$
