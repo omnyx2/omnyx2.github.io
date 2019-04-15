@@ -17,6 +17,7 @@ toc-head-level-choice: false
 # toc-head-min:
 ---
 
+
 ## 이중혁명 이전: 18세기 서양(유럽 및 아메리카)
 
 * 18세기 유럽의 정치 경제적 특징
