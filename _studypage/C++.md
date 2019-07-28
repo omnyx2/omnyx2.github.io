@@ -1,5 +1,5 @@
 ---
-permalink: /study/C++/
+permalink: /study/c++/
 big-category: programming
 title: C++
 subjects: C++
