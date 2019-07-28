@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Linear Algebra_hw_2</title>
+  <meta name="description" content="1.4">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/math/2019-03-13-linear-algebra_HW_2/">
+  <link rel="alternate" type="application/rss+xml" title="CODE_ME" href="http://localhost:4000/feed.xml">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&amp;subset=korean" rel="stylesheet">
+</head>
+
+
+  <body>
+    <header class="site-master-header">
+    <div class="site-master-title">
+        <i class="fab fa-cuttlefish" id="master-header-icon"></i>
+        <a class="site-title" href="/">CODE_ME</a>
+        <div class="langbox">       
+            <a class="lang">ko</a>
+            <a class="lang">en</a>
+        </div>
+
+    </div>
+</header>
+      
+    <header class="site-header" id="becomesticky">
+    <script>
+
+
+        document.onscroll = function() {becomingsticky()};
+
+        var navbar = document.getElementById("becomesticky");
+        var navbarsticky = navbar.offsetTop;
+
+        function becomingsticky() {
+          if (window.pageYOffset >= navbarsticky) {
+            navbar.classList.add("sticky");
+          }else{
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">about</a>
+          
+        
+          
+          <a class="page-link" href="/study">study</a>
+          
+        
+          
+          <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+          <a class="page-link" href="/references/">references</a>
+          
+        
+          
+          <a class="page-link" href="/portfolio/">protfolio</a>
+          
+        
+          
+          <a class="page-link" href="/posts/">posts</a>
+          
+        
+          
+          <a class="page-link" href="/search/">Search</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="post-content-outer">
+        <div class="sidebar-toc">
+  
+  <!-- you can change true to page.toc -->
+  <button onclick="OpenSidebar()" id="OpenSidebarButton">Open</button>
+  <aside
+    class="sidebar__right "
+    style="display: block"
+    id="sidebar__right"
+  >
+    <nav class="toc">
+      <header>
+        <h4 class="nav__title">
+          <i class="fas fa-file-alt"> </i>
+          table of content
+        </h4>
+      </header>
+      <ul class="toc__menu">
+  <li><a href="#14">1.4</a>
+    <ul>
+      <li><a href="#3-f">3-f).</a></li>
+      <li><a href="#5-h">5-h).</a></li>
+      <li><a href="#14-1">14*.</a></li>
+      <li><a href="#15">15*.</a></li>
+    </ul>
+  </li>
+  <li><a href="#14-2">1.4</a>
+    <ul>
+      <li><a href="#2-c">2-c)</a></li>
+      <li><a href="#9">9</a></li>
+    </ul>
+  </li>
+  <li><a href="#16">1.6</a>
+    <ul>
+      <li><a href="#14-3">14</a></li>
+      <li><a href="#22">22.</a></li>
+    </ul>
+  </li>
+</ul>
+    </nav>
+  </aside>
+  
+</div>
+<div class="post-article" id="inner">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">linear algebra hw 2</h1>
+      <p class="post-meta">
+        <time
+          datetime="2019-03-13T00:00:00+09:00"
+          itemprop="datePublished"
+          >Mar 13, 2019</time
+        >
+      </p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      <h1 id="14">1.4</h1>
+
+<h2 id="3-f">3-f).</h2>
+
+<script type="math/tex; mode=display">a(-3,-3, 3) + b(1, 2, -1) = (-3a+b, -3a+2b,3a-b)=(-2,2,2)</script>
+
+<script type="math/tex; mode=display">\\
+\begin{cases}
+  -3a+b - (-3a+2b) =  -b = -2-2 \\
+  3a-b = 3a - 4 =2
+\end{cases} \\
+  
+a = 2 \\
+b = 4</script>
+
+<script type="math/tex; mode=display">\begin{cases}
+  (-6+4, -6+8, 6-4) = (-2, 2, 2)
+\end{cases}</script>
+
+<p>Yes first vector can be expressed as a linear combination of the other two.</p>
+
+<h2 id="5-h">5-h).</h2>
+<p>To show span</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+a
+\begin{pmatrix}
+  1 & 0 \\
+  -1 & 0 \\ 
+\end{pmatrix}
++
+b
+\begin{pmatrix}
+  0 & 1 \\
+  0 & 1 \\ 
+\end{pmatrix}
++
+c
+\begin{pmatrix}
+  1 & 1 \\
+  0 & 0 \\ 
+\end{pmatrix}
+=
+\begin{pmatrix}
+  1 & 0 \\
+  0 & 1 \\ 
+\end{pmatrix} %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{pmatrix}
+  a+c & b+c \\
+  -a & b+c \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+  1 & 0 \\
+  0 & 1 \\
+\end{pmatrix} %]]></script>
+
+<p>But</p>
+
+<script type="math/tex; mode=display">\begin{cases}
+    -a = 0  \cdots (1) \\
+    a+c = 1 \cdots (2) \\
+    b+c = 0 \cdots (3) \\
+    b+c = 1 \cdots (4) \\
+  \end{cases}</script>
+
+<p>So it doesn’t span of S</p>
+
+<h2 id="14-1">14*.</h2>
+<p><script type="math/tex">\Longrightarrow</script>
+Let,</p>
+
+<p><script type="math/tex">a, b \in \mathbb{F}</script>
+<script type="math/tex">x \in span(S_1 \cup S_2)</script></p>
+
+<p>then,</p>
+
+<script type="math/tex; mode=display">S_1 \cup S_2 = {x_1, x_2, \cdots,x_n,y_1, y_2, \cdots, y_k}</script>
+
+<script type="math/tex; mode=display">x = a_1x_1 + \cdots + a_nx_n + b_1y_1 + \cdots + b_ky_k</script>
+
+<script type="math/tex; mode=display">\begin{cases}
+  S_1 = {x_1, x_2, \cdots, x_n} \\
+  S_2 = {y_1, y_2, \cdots, y_k} 
+\end{cases}</script>
+
+<p>It means
+<script type="math/tex">x \in span(S_1) + span(S_2)</script></p>
+
+<p>Hence
+<script type="math/tex">\Rightarrow span(S_1 \cup S_2) \subseteq span(S_1) + span(S_2)</script></p>
+
+<p><script type="math/tex">\Longleftarrow</script>
+Let,</p>
+
+<p><script type="math/tex">a, b \in \mathbb{F}</script>
+<script type="math/tex">x \in span(S_1) + span(S_2)</script></p>
+
+<script type="math/tex; mode=display">\begin{cases}
+  S_1 = {x_1, x_2, \cdots, x_n} \\
+  S_2 = {y_1, y_2, \cdots, y_k} 
+\end{cases}</script>
+
+<script type="math/tex; mode=display">x = a_1x_1 + \cdots + a_nx_n + b_1y_1 + \cdots + b_ky_k</script>
+
+<p>However,</p>
+
+<script type="math/tex; mode=display">S_1 \cup S_2 = {x_1, x_2, \cdots,x_n,y_1, y_2, \cdots, y_k}</script>
+
+<p>It means
+<script type="math/tex">x \in span(S_1 \cup S_2)</script></p>
+
+<p>thus, <script type="math/tex">span(S_1) + span(S_2)</script>
+then <script type="math/tex">span(S_1 \cup S_2)</script> also contain <script type="math/tex">\exists x</script></p>
+
+<p>Hence
+<script type="math/tex">\Longrightarrow span(S_1) + span(S_2)  \subseteq span(S_1 \cup S_2)</script></p>
+
+<p>finally</p>
+
+<p><script type="math/tex">\Longrightarrow span(S_1) + span(S_2)  = span(S_1 \cup S_2)</script></p>
+<h2 id="15">15*.</h2>
+
+<p>Let,</p>
+
+<p><script type="math/tex">a, b \in \mathbb{F}</script>
+<script type="math/tex">x \in span(S_1 \cap S_2)</script></p>
+
+<p>then</p>
+
+<p><script type="math/tex">x = a_1x_1 + \cdots + a_nx_n</script>
+<script type="math/tex">x = a_1x_1 + \cdots + a_nx_n</script></p>
+
+<p>Let,</p>
+
+<script type="math/tex; mode=display">\begin{cases}  
+a_1x_1 + \cdots + a_nx_n \in span(S_1)  \\
+a_1x_1 + \cdots + a_nx_n \in span(S_2)
+\end{cases}</script>
+
+<p>means,</p>
+
+<script type="math/tex; mode=display">\begin{cases}
+  x \in S-1 \\
+  x \in S_2
+\end{cases}</script>
+
+<script type="math/tex; mode=display">\Longrightarrow span(S_1 \cap S_2)  \subseteq span(S_1) \cap span(S_2)</script>
+
+<h1 id="14-2">1.4</h1>
+
+<h2 id="2-c">2-c)</h2>
+
+<p>To check linearly independent</p>
+
+<script type="math/tex; mode=display">a(x^3+2x^2)+b(-x^2+3x+1)+c(x^3-x^2+2x-1) = 0</script>
+
+<script type="math/tex; mode=display">(a+c)x^3 + (2a-b-c)x^2 + (3b+2c)x + b-c=0</script>
+
+<script type="math/tex; mode=display">\begin{cases}
+   a+c = 0 \cdots(1)\\
+   2a-b-c = 0 \cdots(2)\\
+   3b+2c = 0 \cdots(3)\\
+   b-c = 0 \cdots(4) \\
+  \end{cases}</script>
+
+<p>by (4),(3) b=c=0 then a = 0 if not it will not be zero</p>
+
+<p>so this is linearly indep</p>
+
+<h2 id="9">9</h2>
+<p>u, v is different vector in vector space V ,<script type="math/tex">a, b \in \mathbb{f}</script></p>
+
+<p><script type="math/tex">\Longrightarrow</script><br />
+Show with antithesis
+Then  if u is not a multiple of the other vector v then u,v is linearly indep<br />
+Let, if u is not a multiple of the other vector v then u,v is linearly dep</p>
+
+<script type="math/tex; mode=display">a\vec{v}+b\vec{u} = 0 \\</script>
+
+<script type="math/tex; mode=display">\vec{v} = (-b\vec{u})/a</script>
+
+<p>but v and u doesn’t not have same direction
+Then a, b can’t not be 0 in same time, Because it means lin indep
+Thus, linearly dependent when u or v is a multiple of the other.</p>
+
+<p><script type="math/tex">\Longleftarrow</script><br />
+when u or v is multiple of the other <script type="math/tex">\vec{v}=a\vec{u}</script> 
+Let, it is linearly indep</p>
+
+<script type="math/tex; mode=display">\vec{v}= a\vec{u}</script>
+
+<p>if</p>
+
+<p><script type="math/tex">\vec{u}</script> is half of 2
+then,</p>
+
+<script type="math/tex; mode=display">\vec{v}-2\vec{u} = 0</script>
+
+<p>So, it linearly dep, it’s false, As a result lineary when u or v is multiple of the other then it is linearly indep</p>
+
+<p>finally, linearly dependent if and only if u or v is a multiple of the other.</p>
+
+<h1 id="16">1.6</h1>
+
+<h2 id="14-3">14</h2>
+
+<script type="math/tex; mode=display">{W_1 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F}: a_1 - a_2 - a_3 = 0}</script>
+
+<p>So,</p>
+
+<script type="math/tex; mode=display">a_1 = a_3 + a_4</script>
+
+<p>then for <script type="math/tex">a_1, a_3, a_4</script> we only need two dim, and we need a_2, and a_4, 2 dims
+thus we need 4 dim for <script type="math/tex">W_1</script></p>
+
+<script type="math/tex; mode=display">{W_2 = {a_1, a_2, a_3, a_4, a_5} \in \mathbb{F} : a_1 = a_2 = a_3 = 0, a_1 = -a_5}</script>
+
+<p>So,</p>
+
+<script type="math/tex; mode=display">a_1 = a_3 = a_4 =  0</script>
+
+<p>then for <script type="math/tex">a_1, a_3, a_4</script> we only need one dim , and we need 1 dims to determine <script type="math/tex">a_1 or a_5</script>
+thus we need 2 dim for <script type="math/tex">W_2</script></p>
+
+<h2 id="22">22.</h2>
+
+<p>Let <script type="math/tex">W_1</script> is subspace of <script type="math/tex">W_2</script> then,</p>
+
+<script type="math/tex; mode=display">W_1 \cap W_2 = W_1 \Rightarrow dim(W_1 \cap W_2) = dim(W_1)</script>
+
+<p>Next, show  it’s necessary condition
+Assume, <script type="math/tex">W_1</script> is not a subpace of <script type="math/tex">W_2</script>, then <script type="math/tex">\exists x \in W_1</script> and that <script type="math/tex">x \notin W_2</script></p>
+
+<p>Let set of <script type="math/tex">\exists{x}</script> <script type="math/tex">\mathbb{X}</script></p>
+
+<p>then</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+dim(W_1 \cap W_2) < dim(W_1 \cap W_2) + dim(\mathbb{X}) \leq dim(W_1) %]]></script>
+
+<p>Thus, <script type="math/tex">W_1</script> must be subspace of <script type="math/tex">W_2</script> to become</p>
+
+<script type="math/tex; mode=display">dim(W_1 \cap W_2) = dim(W_1)</script>
+
+<p>So, nessary condition is that <script type="math/tex">W_1</script> is subspace of <script type="math/tex">W_2</script></p>
+
+      <div id="disqus_thread"></div>
+<script>
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+ */
+
+var disqus_config = function () {
+	this.page.url = "http://localhost:4000/math/2019-03-13-linear-algebra_HW_2/";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = "/math/linear-algebra_HW_2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+ 
+(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+	s.src = '//code-me.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ 
+      <!--page.comments-->
+      •
+      <a href="https://omnyx2.github.io/math/2019-03-13-linear-algebra_HW_2/#disqus_thread">
+        0 Comments
+      </a>
+      
+    </div>
+  </article>
+</div>
+<div class="sidebar-relate-posts">
+  
+  <nav class="sidebar_left">
+    <ul class="toc__menu">
+      
+      <h2>linear-algebra</h2>
+       
+       
+    </ul>
+  </nav>
+</div>
+<script>
+
+  
+    function screenchange(y) {
+      var sidebar = document.getElementById("sidebar__right");
+      if (y.matches) {
+        // If media query matches
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    }
+
+    window.onload = function() {
+      var y = window.matchMedia("(max-width: 60em)");
+      screenchange(y); // Call listener function at run time
+      y.addListener(screenchange); // Attach listener function on state changes
+    }
+
+    function OpenSidebar() {
+      var sidebar = document.getElementById("sidebar__right");
+      if (sidebar.style.display === "none") {
+        sidebar.style.display = "block";
+      } else {
+        sidebar.style.display = "none";
+      }
+    }
+
+    window.onscroll = function() {becomingsticky2()};
+
+        var sidebarright = document.getElementById("sidebar__right");
+        var fixed__right = sidebarright.offsetTop;
+
+        function becomingsticky2() {
+
+          if (window.pageYOffset >= fixed__right) {
+            sidebarright.classList.add("fixed");
+          }
+          else {
+            sidebarright.classList.remove("fixed");
+          }
+        }
+
+
+
+  </script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CODE_ME</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CODE_ME</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>
+              <div class="middle">
+                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="btn" href="https://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a class="btn" href="https://www.google.com">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a class="btn" href="https://github.com/omnyx2">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="btn" href="https://www.youtube.com">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+          </li>
+        </ul>
+      </div>
+    
+     
+      
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+
+</html>

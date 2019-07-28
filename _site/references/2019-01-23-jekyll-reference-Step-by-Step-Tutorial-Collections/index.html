@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jekyll Reference Step By Step Tutorial Collections</title>
+  <meta name="description" content="9.Collecctions">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/references/2019-01-23-jekyll-reference-Step-by-Step-Tutorial-Collections/">
+  <link rel="alternate" type="application/rss+xml" title="CODE_ME" href="http://localhost:4000/feed.xml">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&amp;subset=korean" rel="stylesheet">
+</head>
+
+
+  <body>
+    <header class="site-master-header">
+    <div class="site-master-title">
+        <i class="fab fa-cuttlefish" id="master-header-icon"></i>
+        <a class="site-title" href="/">CODE_ME</a>
+        <div class="langbox">       
+            <a class="lang">ko</a>
+            <a class="lang">en</a>
+        </div>
+
+    </div>
+</header>
+      
+    <header class="site-header" id="becomesticky">
+    <script>
+
+
+        document.onscroll = function() {becomingsticky()};
+
+        var navbar = document.getElementById("becomesticky");
+        var navbarsticky = navbar.offsetTop;
+
+        function becomingsticky() {
+          if (window.pageYOffset >= navbarsticky) {
+            navbar.classList.add("sticky");
+          }else{
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">about</a>
+          
+        
+          
+          <a class="page-link" href="/study">study</a>
+          
+        
+          
+          <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+          <a class="page-link" href="/references/">references</a>
+          
+        
+          
+          <a class="page-link" href="/portfolio/">protfolio</a>
+          
+        
+          
+          <a class="page-link" href="/posts/">posts</a>
+          
+        
+          
+          <a class="page-link" href="/search/">Search</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="post-content-outer">
+        <div class="sidebar-toc">
+  
+  <!-- you can change true to page.toc -->
+  <button onclick="OpenSidebar()" id="OpenSidebarButton">Open</button>
+  <aside
+    class="sidebar__right "
+    style="display: block"
+    id="sidebar__right"
+  >
+    <nav class="toc">
+      <header>
+        <h4 class="nav__title">
+          <i class="fas fa-file-alt"> </i>
+          table of content
+        </h4>
+      </header>
+      <ul class="toc__menu">
+  <li><a href="#9collecctions">9.Collecctions</a></li>
+  <li><a href="#configuration">Configuration</a></li>
+  <li><a href="#add-authors">Add authors</a></li>
+  <li><a href="#staff-page">Staff page</a></li>
+  <li><a href="#output-a-page">Output a page</a></li>
+  <li><a href="#front-matter-defaults">Front matter defaults</a></li>
+  <li><a href="#list-authors-posts">List author’s posts</a></li>
+  <li><a href="#link-to-authors-page">Link to authors page</a></li>
+</ul>
+    </nav>
+  </aside>
+  
+</div>
+<div class="post-article" id="inner">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">jekyll 사용법 레퍼런스 번역-9.Collections</h1>
+      <p class="post-meta">
+        <time
+          datetime="2019-01-23T00:00:00+09:00"
+          itemprop="datePublished"
+          >Jan 23, 2019</time
+        >
+      </p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      <h1 id="9collecctions">9.Collecctions</h1>
+
+<p>=======================================</p>
+
+<p>01.22.2019 작성<br />
+jeykll 3. 8. 5<br />
+Bundler version 2.0.</p>
+
+<p>=======================================</p>
+
+<p><code class="highlighter-rouge">authors</code>에 살을 덧붙여 보자, 이걸 위해 <code class="highlighter-rouge">author</code>`는 자신만의 posts들과 안내문 개인 페이지를 개설해야된다.</p>
+
+<p>이러한 것을 하기 위해서 너는 <code class="highlighter-rouge">collections</code>을 사용하게 될 것이다. <code class="highlighter-rouge">Collections</code>는 <code class="highlighter-rouge">content</code>가 반드시 date을 기준으로 나뉘어져야 할 필요가 없다는 점을 제외하고는 <code class="highlighter-rouge">post</code>와 비슷하다. <br />
+<br /></p>
+
+<h1 id="configuration">Configuration</h1>
+
+<p><code class="highlighter-rouge">collection</code>을 셋업하기 위해서는 반드시 Jekyll에 말해주어야 한다. Jekyll의 환경설정은 <code class="highlighter-rouge">_config.yml</code>에서 건들일 수 있다.(기본적으로임)<br />
+<br /></p>
+
+<h1 id="add-authors">Add authors</h1>
+<p><code class="highlighter-rouge">Documents</code>은(colletion안에 있는 item) 사이트의 이름이 시작한 곳인 <code class="highlighter-rouge">_*conllecion_name*</code>에 들어 있다. 이번의 경우는 _authors.</p>
+
+<p>각 author에 대해서 document를 만들어 보자.</p>
+
+<p><code class="highlighter-rouge">_authors/jill.md:</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+short_name: jill
+name: Jill Smith
+position: Chief Editor
+---
+Jill is an avid fruit grower based in the south of France.
+</code></pre></div></div>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">_authors/ted.md</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+short_name: ted
+name: Ted Doe
+position: Writer
+---
+Ted has been eating fruit since he was baby.
+</code></pre></div></div>
+<p><br /></p>
+
+<h1 id="staff-page">Staff page</h1>
+
+<p>사이트의 모든 저자를 나열하는 페이지를 추가하겠습니다. Jekyll은 site.authors에서 collection을 사용하게 해줍니다.<br />
+<br /><br />
+staff.html을 만들고 <code class="highlighter-rouge">stie.authors</code>에서 전부 출력할 수 있게 반복해 줍니다:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+title: Staff
+---
+&lt;h1&gt;Staff&lt;/h1&gt;
+
+&lt;ul&gt;
+  {% for author in site.authors %}
+    &lt;li&gt;
+      &lt;h2&gt;{{ author.name }}&lt;/h2&gt;
+      &lt;h3&gt;{{ author.position }}&lt;/h3&gt;
+      &lt;p&gt;{{ author.content | markdownify }}&lt;/p&gt;
+    &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</code></pre></div></div>
+<p><br /></p>
+
+<p>이후, the content들이 markdown이면, 반드시 <code class="highlighter-rouge">markdonify</code> 필터를 통해서 돌려줄 필요성이 생긴다. 이러한 일은 layout의 안에서 ``{{content}}를 이용해 출력할 경우에 자동적으로 일어나게 된다.</p>
+
+<p>다음으로 넘어가, 이제 너는 이러한 과정을 통해 생긴 page들로 이동할 수 있는 navigation들이 필요해질 것이다. 이럴 때는 _data/navigaton.을yml을 열고 각 staff페이지들에서 항목을 넣어주면 된다:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Blog
+  link: /blog.html
+- name: Staff
+  link: /staff.html
+</code></pre></div></div>
+<p><br /></p>
+
+<h1 id="output-a-page">Output a page</h1>
+<p>기본적으로, collections는 documents의 page를 출력하지 않는다. 그러나 지금, 우리는 각 author가 자신만의 page를 가지는 것을 원하기에 collection configuration을 바꿔보자</p>
+
+<p><code class="highlighter-rouge">_config.yml</code> 을 열고 <code class="highlighter-rouge">output: true</code>를 author collection configuraation에 추가 합니다:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>collections:
+  authors:
+    output: true
+</code></pre></div></div>
+<p><br /></p>
+
+<p>이제 너는 보여지는 page에 <code class="highlighter-rouge">author.url</code>을 이용해서 연결시킬 수 있다.
+staff.html에 이 link를 추가해 보자:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+&lt;h1&gt;Staff&lt;/h1&gt;
+
+&lt;ul&gt;
+  {% for author in site.authors  %}
+    &lt;li&gt;
+      &lt;h2&gt;&lt;a href="{{ author.url  }}"&gt; {{ author.name  }}&lt;/a&gt;&lt;/h2&gt;
+      &lt;h3&gt;{{ author.position  }}&lt;/h3&gt;
+      &lt;p&gt;{{ author.content | markdownify }}&lt;/p&gt;
+    &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<p>게시물과 마찬가지로 작성자를위한 레이아웃을 만들어야합니다.</p>
+
+<p>다음 내용으로 <code class="highlighter-rouge">_layouts / author.html</code>을 작성하세요:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+&lt;h1&gt;{{ page.name  }}&lt;/h1&gt;
+&lt;h2&gt;{{ page.position  }}&lt;/h2&gt;
+
+{{ content  }}
+</code></pre></div></div>
+<p><br /></p>
+
+<h1 id="front-matter-defaults">Front matter defaults</h1>
+<p>이제 너는 <code class="highlighter-rouge">author</code> layout을 사용하여 author documents를 설정해 주어야 한다. 이 작업은 단순이 전에 front matter에서 했던 작업을 반복하는 것이다.</p>
+
+<p>너가 궁극적으로 원하는 것은 모든 포스트들이 post layout을 자동적으로 가지는 것이다. authors는 <code class="highlighter-rouge">author</code>를 가지고 다른 모든 것들은 default를 사용하게끔</p>
+
+<p>너의 _config.yml에 있는 defaults에 layouts를 추가하라:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">collections:
+  authors:
+    output: </span><span class="kp">true</span>
+
+<span class="ss">defaults:
+  </span><span class="o">-</span> <span class="ss">scope:
+      path: </span><span class="s2">""</span>
+      <span class="ss">type: </span><span class="s2">"authors"</span>
+    <span class="ss">values:
+      layout: </span><span class="s2">"author"</span>
+  <span class="o">-</span> <span class="ss">scope:
+      path: </span><span class="s2">""</span>
+      <span class="ss">type: </span><span class="s2">"posts"</span>
+    <span class="ss">values:
+      layout: </span><span class="s2">"post"</span>
+  <span class="o">-</span> <span class="ss">scope:
+      path: </span><span class="s2">""</span>
+    <span class="ss">values:
+      layout: </span><span class="s2">"default"</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p>이제 너는 모든 pages와 posts로 부터 layout front matter를 지울수 있다. 명심해라 _config.yml이 변경될 경우 Jekyll을 재시작 해야 한다.</p>
+
+<h1 id="list-authors-posts">List author’s posts</h1>
+<p>각 author가 자신의 page에 만든 posts의 list를 나타내 보자. 이것을 하기 위해서 너는 author의 <code class="highlighter-rouge">short_name</code>과 post의 <code class="highlighter-rouge">author</code>를 일치시켜야 한다. 너는 특정 author의 posts들을 얻기 위해서 filter를 써야한다.</p>
+
+<p><code class="highlighter-rouge">_layouts/author.html</code>에서 filter된 목록들을 반복하여 author의 posts를 출력하세요:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+&lt;h1&gt;{{ page.name  }}&lt;/h1&gt;
+&lt;h2&gt;{{ page.position  }}&lt;/h2&gt;
+
+{{ content  }}
+
+&lt;h2&gt;Posts&lt;/h2&gt;
+&lt;ul&gt;
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name  %}
+  {% for post in filtered_posts %}
+    &lt;li&gt;&lt;a href="{{ post.url }}"&gt;{{ post.title  }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor  %}
+&lt;/ul&gt;
+</code></pre></div></div>
+<p><br /></p>
+
+<h1 id="link-to-authors-page">Link to authors page</h1>
+<p>posts에는 author에 대한 참조가 있습니다. 자 이제 author의 page를 서로 연결 시켜 봅시다. 너는 <code class="highlighter-rouge">_layouts/post.html</code>에서 사용한 것과 비슷한 filtering technique를 이용하여 이러한 작업을 할 수 있습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+&lt;h1&gt;{{ page.title  }}&lt;/h1&gt;
+
+&lt;p&gt;
+   {{ page.date | date_to_string  }}
+   {% assign author = site.authors | where: 'short_name',
+  page.author | first  %}
+   {% if author  %}
+    - &lt;a href=""&gt; {{ author.name  }}&lt;/a&gt;
+   {% endif  %}
+&lt;/p&gt;
+
+ {{ content  }}
+</code></pre></div></div>
+<p>http://localhost:4000를 열어 staff page를 확인하고 post에 이를 작성한 author가 제대로 연결되어 있는지 체크해 봅시다.<br />
+다음에는 드디어 이 튜토리얼의 마지막 입니다. 이 단계에서는 사이트에 세련된 부분을 추가하고 프로덕션 배포를 위해 준비 할 것입니다.</p>
+
+      <div id="disqus_thread"></div>
+<script>
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+ */
+
+var disqus_config = function () {
+	this.page.url = "http://localhost:4000/references/2019-01-23-jekyll-reference-Step-by-Step-Tutorial-Collections/";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = "/references/jekyll-reference-Step-by-Step-Tutorial-Collections"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+ 
+(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+	s.src = '//code-me.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ 
+      <!--page.comments-->
+      •
+      <a href="https://omnyx2.github.io/references/2019-01-23-jekyll-reference-Step-by-Step-Tutorial-Collections/#disqus_thread">
+        0 Comments
+      </a>
+      
+    </div>
+  </article>
+</div>
+<div class="sidebar-relate-posts">
+  
+  <nav class="sidebar_left">
+    <ul class="toc__menu">
+      
+      <h2>jekyll</h2>
+       
+      
+      <li>
+        <a href="/programming/2019-01-20-ko-Markdown-in-jekyll-post/">jekyll, github blog markdown 사용하는 법, 예쁘게 꾸미자 </a>
+      </li>
+      
+      <li>
+        <a href="/programming/2019-01-22-en-start-git-blog-for-ubuntu/">start jekyll blog for ubuntu </a>
+      </li>
+      
+      <li>
+        <a href="/programming/2019-01-22-ko-jekyll-markdown/">gitblog markdown 쓰기 </a>
+      </li>
+      
+      <li>
+        <a href="/programming/2019-02-26-en-making-blog-project0/">making jekyll blog project-0 </a>
+      </li>
+      
+      <li>
+        <a href="/programming/2019-02-26-en-making-blog-project1/">making jekyll blog project-1 </a>
+      </li>
+      
+      <li>
+        <a href="/programming/2019-02-26-en-making-blog-project2/">making jekyll blog project-2 </a>
+      </li>
+      
+      <li>
+        <a href="/programming/2019-03-13-ko-jekyll-mathjax/">Mathjax를 이용해 Jekyll에 수식넣기 </a>
+      </li>
+       
+    </ul>
+  </nav>
+</div>
+<script>
+
+  
+    function screenchange(y) {
+      var sidebar = document.getElementById("sidebar__right");
+      if (y.matches) {
+        // If media query matches
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    }
+
+    window.onload = function() {
+      var y = window.matchMedia("(max-width: 60em)");
+      screenchange(y); // Call listener function at run time
+      y.addListener(screenchange); // Attach listener function on state changes
+    }
+
+    function OpenSidebar() {
+      var sidebar = document.getElementById("sidebar__right");
+      if (sidebar.style.display === "none") {
+        sidebar.style.display = "block";
+      } else {
+        sidebar.style.display = "none";
+      }
+    }
+
+    window.onscroll = function() {becomingsticky2()};
+
+        var sidebarright = document.getElementById("sidebar__right");
+        var fixed__right = sidebarright.offsetTop;
+
+        function becomingsticky2() {
+
+          if (window.pageYOffset >= fixed__right) {
+            sidebarright.classList.add("fixed");
+          }
+          else {
+            sidebarright.classList.remove("fixed");
+          }
+        }
+
+
+
+  </script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CODE_ME</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CODE_ME</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>
+              <div class="middle">
+                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="btn" href="https://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a class="btn" href="https://www.google.com">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a class="btn" href="https://github.com/omnyx2">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="btn" href="https://www.youtube.com">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+          </li>
+        </ul>
+      </div>
+    
+     
+      
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+
+</html>

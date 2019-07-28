@@ -1,0 +1,34 @@
+---
+layout: default
+permalink: /posts/
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="">
+        <li class="title">
+          {{ post.title }} 
+        </li>
+        <li class="date">
+            <time
+            datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished"
+            >
+               {{ post.date | date: "%b %-d, %Y" }}
+            </time>
+        </li>
+      </a>
+    
+    {% endfor %}
+  </ul> 
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
+
+x

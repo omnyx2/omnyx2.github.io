@@ -59,8 +59,8 @@ ul.post-list{
       border-radius: 5px 5px 5px 5px;
     }
     li.date{
+        color: #F27979;
         float: right;
-        width: 25%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -148,20 +148,36 @@ ul.post-list{
 .post-content {
    position: relative;
    margin-bottom: $spacing-unit;
+   
+   
+   h1 {
+    margin-top: 1.5em;
+    font-size: 36px;
+    border-bottom: 1px solid  $border-bottom-color;
+  
+    @include media-query($on-laptop) {
+        margin-top: 1.5em;
+        font-size: 32px;
+        border-bottom: 1px solid  $border-bottom-color;
+    }
+   }
+
 
    h2 {
        font-size: 32px;
-
+       margin-top: 1em;
        @include media-query($on-laptop) {
            font-size: 28px;
+           margin-top: 1em;
        }
    }
 
    h3 {
        font-size: 26px;
-
+       margin-top: 0.9em;
        @include media-query($on-laptop) {
            font-size: 22px;
+           margin-top: 0.9em;
        }
    }
 

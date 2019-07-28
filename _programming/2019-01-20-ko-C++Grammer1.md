@@ -1,7 +1,8 @@
 ---
 lang: "ko"
 ref: "C++"
-layout: post_relate
+image-name: "bg.jpg"
+layout: landing_post_relate
 big-title: "C++"
 middle-title: "C++ 문법"
 small-title: "C++ 시작하기" 

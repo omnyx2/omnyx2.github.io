@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Black Forest</title>
+  <meta name="description" content="Start!Download youtube music and videos, with python and pytube and also fixing som errors">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/projects/python-youtube-connection/">
+  <link rel="alternate" type="application/rss+xml" title="CODE_ME" href="http://localhost:4000/feed.xml">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&amp;subset=korean" rel="stylesheet">
+</head>
+
+
+  <body>
+    <header class="site-master-header">
+    <div class="site-master-title">
+        <i class="fab fa-cuttlefish" id="master-header-icon"></i>
+        <a class="site-title" href="/">CODE_ME</a>
+        <div class="langbox">       
+            <a class="lang">ko</a>
+            <a class="lang">en</a>
+        </div>
+
+    </div>
+</header>
+      
+    <header class="site-header" id="becomesticky">
+    <script>
+
+
+        document.onscroll = function() {becomingsticky()};
+
+        var navbar = document.getElementById("becomesticky");
+        var navbarsticky = navbar.offsetTop;
+
+        function becomingsticky() {
+          if (window.pageYOffset >= navbarsticky) {
+            navbar.classList.add("sticky");
+          }else{
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">about</a>
+          
+        
+          
+          <a class="page-link" href="/study">study</a>
+          
+        
+          
+          <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+          <a class="page-link" href="/references/">references</a>
+          
+        
+          
+          <a class="page-link" href="/portfolio/">protfolio</a>
+          
+        
+          
+          <a class="page-link" href="/posts/">posts</a>
+          
+        
+          
+          <a class="page-link" href="/search/">Search</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="start">Start!</h1>
+<p>Download youtube music and videos, with python and pytube and also fixing som errors</p>
+
+<h2 id="environement">environement</h2>
+<hr />
+<p>Windows10 <br />
+VSCode
+Python 3.7.3
+pytube 9.5
+—-</p>
+
+<h2 id="프로젝트의-목적">프로젝트의 목적</h2>
+<p>이번 프로젝트의 주제는 유튜브에서 동영상을 다운받거나 음악파일을 다운 받는 것이다. 물론 유튜브 프리미엄을 쓰면 된다고는 하지만 언제나 터미널적인 감성을 원하는 사람은 늘 있기 마련이므로, 이러한 부분의 제작에 있어서 해당 프로젝트를 진행하게 되었다. 그리고 해당 프로젝트의 진행에 앞서 저작물에 대해 주의 깊은 취급을 바라며, 이 글의 작성자는 작성자 본인을 제외한 이 프로그램의 구동 프로그램 자체와 관련된 모든 저작권에 대한 책임을 지지않는다.</p>
+
+<h2 id="pytube">pytube</h2>
+<p>정말 좋은 점은 이미 파이썬에서는 이미 유뷰트에서 동영상을 다운받는 라이브러리를 만들어 놓았다.</p>
+
+<p>Github(설치) : https://github.com/nficano/pytube
+APIs 추가 설명: https://python-pytube.readthedocs.io/en/latest/index.html</p>
+
+<p>pytube의 설치는 정말로 쉽다. 아래의 명령어를치고 실행하자.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pytube
+</code></pre></div></div>
+
+<h2 id="download-source-code">download source code</h2>
+
+<p>이를 이용해 간단한 다운로드 소스코드를 짜보았다. 더 자세한 설명을 보고 싶으면 공식문서를 참조하거나 다음의 블로그에서 참고해도 좋다. https://
+niceman.tistory.com/92#recentComments. 그러나 해당 주소의 소스코드도 그렇고 본 블로그의 소스코드도 그러한데 이 코드의 동작에는 에러가 발생한다.
+HTTP 403 forbidden이라는 에러인데 이 부분을 잡지않으면 아래의 코드는 돌아가지 않는다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pytube</span> <span class="kn">import</span> <span class="n">YouTube</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"동영상의 주소를 입력해 주세요: "</span><span class="p">)</span>
+<span class="n">yt</span> <span class="o">=</span> <span class="n">YouTube</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="nb">list</span> <span class="ow">in</span> <span class="n">yt</span><span class="o">.</span><span class="n">streams</span><span class="o">.</span><span class="nb">all</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span><span class="s">''</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="n">options</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"몇번을 할 것인지 고르세요: "</span><span class="p">))</span>
+<span class="n">yt</span><span class="o">.</span><span class="n">streams</span><span class="o">.</span><span class="nb">all</span><span class="p">()[</span><span class="n">options</span><span class="p">]</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s">'./music'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="403-forbidden">403 Forbidden</h2>
+
+<p>이 소스코드를 활용할때 주의할 점이 있다. 오늘 2019년 6월 19일 기준을 pytube라이브러리와 youtube사의 프로그램 정책변경에 따른 에러에 의해 pytube의 라이브러리에서 mixins에서 ‘&amp;signature=’부분을 ‘&amp;sig=’로 변경해주어야한다. 근데 생각보다 window에서 pip로 다운 받은 소스 코드를 직접 수정할일이 별로 없기 때문에 찾는데 난항을 겪을 수 있다. 이럴경우 탐색으로 pytube를 치고, 정확히 pytube라는 이름의 폴더가 나올때까지 롤이라도 한판 돌리도록 하자.
+이에대한 논의는 아래에 잘 정리되어 있다.</p>
+
+<p>https://github.com/nficano/pytube/issues/399</p>
+
+<p>수정이 완료되면 아래와 같이 코드가 되어야한다.(전체코드중 일부)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">if</span> <span class="p">(</span><span class="s">'signature='</span> <span class="ow">in</span> <span class="n">url</span> <span class="ow">or</span> 
+                <span class="p">(</span><span class="s">'s'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stream</span> <span class="ow">and</span> 
+                 <span class="p">(</span><span class="s">'&amp;sig='</span> <span class="ow">in</span> <span class="n">url</span> <span class="ow">or</span> <span class="s">'&amp;lsig='</span> <span class="ow">in</span> <span class="n">url</span><span class="p">))):</span>
+            <span class="c1"># For certain videos, YouTube will just provide them pre-signed, in
+</span>            <span class="c1"># which case there's no real magic to download them and we can skip
+</span>            <span class="c1"># the whole signature descrambling entirely.
+</span>            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'signature found, skip decipher'</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">js</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">signature</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">get_signature</span><span class="p">(</span><span class="n">js</span><span class="p">,</span> <span class="n">stream</span><span class="p">[</span><span class="s">'s'</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># signature not present in url (line 33), need js to descramble
+</span>            <span class="c1"># TypeError caught in __main__
+</span>            <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'JS is None'</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+            <span class="s">'finished descrambling signature for itag=</span><span class="si">%</span><span class="s">s</span><span class="se">\n</span><span class="si">%</span><span class="s">s'</span><span class="p">,</span>
+            <span class="n">stream</span><span class="p">[</span><span class="s">'itag'</span><span class="p">],</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="s">'s'</span><span class="p">:</span> <span class="n">stream</span><span class="p">[</span><span class="s">'s'</span><span class="p">],</span>
+                    <span class="s">'signature'</span><span class="p">:</span> <span class="n">signature</span><span class="p">,</span>
+                <span class="p">},</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">stream_manifest</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s">'url'</span><span class="p">]</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s">'&amp;sig='</span> <span class="o">+</span> <span class="n">signature</span>
+</code></pre></div></div>
+
+<p>이후 실행을 시키면 잘 되는 것을 확인 할 수 있다.</p>
+
+<p>##
+ffgmep: http://blog.naver.com/PostView.nhn?blogId=chandong83&amp;logNo=221165275268&amp;parentCategoryNo=&amp;categoryNo=101&amp;viewDate=&amp;isShowPopularPosts=true&amp;from=search</p>
+
+<p>subprocess: https://soooprmx.com/archives/5932</p>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CODE_ME</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CODE_ME</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>
+              <div class="middle">
+                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="btn" href="https://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a class="btn" href="https://www.google.com">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a class="btn" href="https://github.com/omnyx2">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="btn" href="https://www.youtube.com">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+          </li>
+        </ul>
+      </div>
+    
+     
+      
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+
+</html>

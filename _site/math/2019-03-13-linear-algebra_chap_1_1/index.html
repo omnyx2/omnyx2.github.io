@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Linear Algebra_chap_1_1</title>
+  <meta name="description" content="Intro duction of Linear Algebra">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/math/2019-03-13-linear-algebra_chap_1_1/">
+  <link rel="alternate" type="application/rss+xml" title="CODE_ME" href="http://localhost:4000/feed.xml">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&amp;subset=korean" rel="stylesheet">
+</head>
+
+
+  <body>
+    <header class="site-master-header">
+    <div class="site-master-title">
+        <i class="fab fa-cuttlefish" id="master-header-icon"></i>
+        <a class="site-title" href="/">CODE_ME</a>
+        <div class="langbox">       
+            <a class="lang">ko</a>
+            <a class="lang">en</a>
+        </div>
+
+    </div>
+</header>
+      
+    <header class="site-header" id="becomesticky">
+    <script>
+
+
+        document.onscroll = function() {becomingsticky()};
+
+        var navbar = document.getElementById("becomesticky");
+        var navbarsticky = navbar.offsetTop;
+
+        function becomingsticky() {
+          if (window.pageYOffset >= navbarsticky) {
+            navbar.classList.add("sticky");
+          }else{
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">about</a>
+          
+        
+          
+          <a class="page-link" href="/study">study</a>
+          
+        
+          
+          <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+          <a class="page-link" href="/references/">references</a>
+          
+        
+          
+          <a class="page-link" href="/portfolio/">protfolio</a>
+          
+        
+          
+          <a class="page-link" href="/posts/">posts</a>
+          
+        
+          
+          <a class="page-link" href="/search/">Search</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="post-content-outer">
+        <div class="sidebar-toc">
+  
+  <!-- you can change true to page.toc -->
+  <button onclick="OpenSidebar()" id="OpenSidebarButton">Open</button>
+  <aside
+    class="sidebar__right "
+    style="display: block"
+    id="sidebar__right"
+  >
+    <nav class="toc">
+      <header>
+        <h4 class="nav__title">
+          <i class="fas fa-file-alt"> </i>
+          table of content
+        </h4>
+      </header>
+      <ul class="toc__menu">
+  <li><a href="#수업-목표">수업 목표</a></li>
+</ul>
+    </nav>
+  </aside>
+  
+</div>
+<div class="post-article" id="inner">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">linear algebra chapter 1.1</h1>
+      <p class="post-meta">
+        <time
+          datetime="2019-03-13T00:00:00+09:00"
+          itemprop="datePublished"
+          >Mar 13, 2019</time
+        >
+      </p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      <p>Intro duction of Linear Algebra</p>
+
+<p>선형대수의 핵심용어
+<script type="math/tex">\begin{cases} \\
+  선형적 \\
+  Matrix \\
+  Vertor spaces \\
+  \end{cases}</script></p>
+
+<p>Q: 어떻게 generalized 할 수 있는가?</p>
+<ol>
+  <li>order는 증가시키지만 변수의 개수는 일정하게 하는것
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">\begin{cases} \\
+ x^3 + 2x + 5 =0(poly) \\
+ \vdots (exp)\\
+ \vdots (\vdots)\\
+ \vdots (log)\\</script>
+      </li>
+    </ul>
+  </li>
+  <li>변수의 개수는 증가시지만 선형성을 유지하는것
+    <ul>
+      <li>e.g) <script type="math/tex">\begin{cases} 
+     3x_1+2x_2+7x_3 = 6 \\
+     2x_1-x_2+8x_3 = 2 \\</script></li>
+      <li>e.g) In a matrix form  <script type="math/tex">% <![CDATA[
+\begin{pmatrix} \\
+                       3 & 2 & 7 \\
+                       2 & -1 & 8 
+                      \end{pmatrix}
+                      \begin{pmatrix} \\
+                       x_1 \\
+                       x_2 \\
+                       x_3 
+                      \end{pmatrix}
+                     =
+                      \begin{pmatrix}
+                      6 \\
+                      2 \\
+                      \end{pmatrix} %]]></script>
+일반화를 하면,</li>
+    </ul>
+  </li>
+</ol>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{pmatrix}
+ {a_1}_1 & {a_1}_2 & \cdots & {a_1}_n \\
+ {a_2}_1 & \vdots  &        & \vdots  \\
+ \vdots  & \vdots  &        & \vdots  \\
+ {a_n}_1 & {a_n}_2 & \cdots & {a_n}_n \\
+ \end{pmatrix}
+ \begin{pmatrix}
+ x_1 \\
+ x_2 \\ 
+ \vdots \\
+ x_n \\
+ \end{pmatrix}
+ =
+ \begin{pmatrix}
+ b_1 \\
+ b_2 \\
+ \vdots \\
+ b_n
+ \end{pmatrix} %]]></script>
+
+<p>This is Linear system</p>
+
+<script type="math/tex; mode=display">A\vec{x} = \vec{b}</script>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note:
+ax=b에서 단일 변수인 x가 $$ A\vec{x} = \vec{b} $$에서 여러 차원의 정보를 담은 데이터인 벡터 x로 바뀐 것이다.
+</code></pre></div></div>
+
+<p>e.g)</p>
+<ul>
+  <li>student information = (id, age, sex, gpa)</li>
+  <li>digital images = ( color codes in each pixel)</li>
+</ul>
+
+<h2 id="수업-목표">수업 목표</h2>
+
+<script type="math/tex; mode=display">Ax = b</script>
+
+<p>A 는 메트릭스 x,b는 벡터 공간 이라고 할때 벡터공간으로부터 matrix formmation 하여 다른 벡터 공간으로의 이동.</p>
+
+<ol>
+  <li>
+    <p>벡터를 표현할 수 있게 되는것, 우리는 이를 위해 vector spaces를 배울 것이다.(basis, dim, linear indep, span, subspace등)</p>
+  </li>
+  <li>
+    <p>matrix를 간략하게 만드는 법( 좋은 좌표시스템(basis)를 선택하므로써)
+e.g) Diagonalization, Jordon canonial form</p>
+  </li>
+</ol>
+
+<p>Q: 선형성 이란 무엇인가?</p>
+
+<p>A: x를 다음의 A(x) 로 대응 시킬 수 있을 때 선형성을 띤다고 할 수 있다.</p>
+
+<script type="math/tex; mode=display">\begin{cases}
+   A(x+y) = A(x) \\
+   A(cx) = cA(x) \\
+ \end{cases}</script>
+
+<p>결국 다음의 2 성질을 만족할 때 선형성(linearity)을 띈다고 이야기 할 수 있다.</p>
+
+<script type="math/tex; mode=display">\begin{cases}
+  + (vertor addtion) \\
+  \cdot(scalar muliti plication) \\
+ \end{cases}</script>
+
+
+      <div id="disqus_thread"></div>
+<script>
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+ */
+
+var disqus_config = function () {
+	this.page.url = "http://localhost:4000/math/2019-03-13-linear-algebra_chap_1_1/";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = "/math/linear-algebra_chap_1_1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+ 
+(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+	s.src = '//code-me.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ 
+      <!--page.comments-->
+      •
+      <a href="https://omnyx2.github.io/math/2019-03-13-linear-algebra_chap_1_1/#disqus_thread">
+        0 Comments
+      </a>
+      
+    </div>
+  </article>
+</div>
+<div class="sidebar-relate-posts">
+  
+  <nav class="sidebar_left">
+    <ul class="toc__menu">
+      
+      <h2>linear-algebra</h2>
+       
+       
+    </ul>
+  </nav>
+</div>
+<script>
+
+  
+    function screenchange(y) {
+      var sidebar = document.getElementById("sidebar__right");
+      if (y.matches) {
+        // If media query matches
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    }
+
+    window.onload = function() {
+      var y = window.matchMedia("(max-width: 60em)");
+      screenchange(y); // Call listener function at run time
+      y.addListener(screenchange); // Attach listener function on state changes
+    }
+
+    function OpenSidebar() {
+      var sidebar = document.getElementById("sidebar__right");
+      if (sidebar.style.display === "none") {
+        sidebar.style.display = "block";
+      } else {
+        sidebar.style.display = "none";
+      }
+    }
+
+    window.onscroll = function() {becomingsticky2()};
+
+        var sidebarright = document.getElementById("sidebar__right");
+        var fixed__right = sidebarright.offsetTop;
+
+        function becomingsticky2() {
+
+          if (window.pageYOffset >= fixed__right) {
+            sidebarright.classList.add("fixed");
+          }
+          else {
+            sidebarright.classList.remove("fixed");
+          }
+        }
+
+
+
+  </script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CODE_ME</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CODE_ME</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>
+              <div class="middle">
+                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="btn" href="https://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a class="btn" href="https://www.google.com">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a class="btn" href="https://github.com/omnyx2">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="btn" href="https://www.youtube.com">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+          </li>
+        </ul>
+      </div>
+    
+     
+      
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+
+</html>

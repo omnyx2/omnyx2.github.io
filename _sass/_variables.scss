@@ -59,6 +59,7 @@ $code-background-color-dark: $light-gray !default;
 $text-color: $dark-gray !default;
 $muted-text-color: mix(#fff, $text-color, 35%) !default;
 $border-color: $lighter-gray !default;
+$border-bottom-color: #D0D0D0 !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
 
@@ -69,7 +70,12 @@ $danger-color: #ee5f5b !default;
 $info-color: #3b9cba !default;
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;
-
+/* living coral color palte */
+$first-color: #590202  !default;
+$second-color: #D93B3B  !default;
+$third-color: #F27979 !default;
+$forth-color:#F2ACAC !default;
+$fifth-color: #0D0D0D !default;
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray !default;
 $yiq-contrasted-light-default: #fff !default;

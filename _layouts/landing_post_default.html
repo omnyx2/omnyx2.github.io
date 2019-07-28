@@ -2,14 +2,18 @@
 <html>
 
   {% include head.html %}
-
+  {% assign url = "../../images/" %}
   <body>
     {% include masterheader.html%}
     {% include header.html %}
     <!-- this is part where I fixed -->
     <div class="temp-content">
         <section class="b1">
+          <!-- <div class="background-image">
+            
+          </div> -->
           <div class="in1">
+            <img src="{{page.image-name | prepend: url}}" alt="">
             <div class="landing-title">
                 <h1 class="post-title" itemprop="name headline">{{ page.small-title }}</h1>
                 <p class="post-meta">
