@@ -13,14 +13,36 @@ layout: default
 {% assign result= subtitle | uniq %}
 {% assign size= 0 %}
 {% assign t=0 %}
+<div class="index-page">
+  <h1>{{ page.title }}</h1>
 
-<h1>{{ page.title }}</h1>
+  {% for temp in result %}
+    <h2>{{ temp }}</h2>
+    <ul class="post-list">
+      {% assign subpost = category | where:"middle-title", temp |sort: date %} 
+      {% for temp in subpost %}
+      <a href="{{ temp.url }}" class="">
+        <li class="title">
+          {{ temp.small-title }} 
+        </li>
+        <li class="date">
+            <time
+            datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished"
+            >
+              {{ temp.date | date: "%b %-d, %Y" }}
+            </time>
+        </li>
+      </a>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 
-{% for temp in result %}
-  <h2>{{ temp }}</h2>
+
+  <h2>All posts</h2>
+  {% assign category = site.programming | where:"field", page.subjects |sort: date %}
+  {% for temp in category %}
   <ul class="post-list">
-    {% assign subpost = category | where:"middle-title", temp |sort: date %} 
-    {% for temp in subpost %}
     <a href="{{ temp.url }}" class="">
       <li class="title">
         {{ temp.small-title }} 
@@ -30,38 +52,17 @@ layout: default
           datetime="{{ page.date | date_to_xmlschema }}"
           itemprop="datePublished"
           >
-             {{ temp.date | date: "%b %-d, %Y" }}
+            {{ temp.date | date: "%b %-d, %Y" }}
           </time>
       </li>
     </a>
-    {% endfor %}
   </ul>
-{% endfor %}
+  {% endfor %}
 
 
-<h2>All posts</h2>
-{% assign category = site.programming | where:"field", page.subjects |sort: date %}
-{% for temp in category %}
-<ul class="post-list">
-  <a href="{{ temp.url }}" class="">
-    <li class="title">
-      {{ temp.small-title }} 
-    </li>
-    <li class="date">
-        <time
-        datetime="{{ page.date | date_to_xmlschema }}"
-        itemprop="datePublished"
-        >
-           {{ temp.date | date: "%b %-d, %Y" }}
-        </time>
-    </li>
-  </a>
-</ul>
-{% endfor %}
+  <div class="post-body">
 
+  {{ content }}
 
-<div class="post-body">
-
-{{ content }}
-
+  </div>
 </div>
