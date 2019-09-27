@@ -1,8 +1,8 @@
 ---
 permalink: /study/vim/
 big-category: programming
-title: vim 공부
-subjects: vim 공부
+title: vim
+subjects: vim
 layout: programming_theme
 ---
 
