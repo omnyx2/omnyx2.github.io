@@ -1,6 +1,6 @@
 ---
 lang: "ko"
-ref: "VIM study"
+ref: "vim"
 layout: post_relate
 big-title: "programming"
 middle-title: "vim 공부"
