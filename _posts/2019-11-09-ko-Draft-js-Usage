@@ -1,0 +1,77 @@
+---
+lang: "ko"
+ref: "Draft.js"
+layout: post_relate
+big-title: "Draft.js"
+middle-title: "Draft.js Usage"
+small-title: "Draft.js 사용기"
+field:
+  - Draft.js
+  
+relate:
+  - Draft.js
+toc: true
+toc-head-level-choice: false
+#do this if head level choice is true
+# toc-head-max:
+# toc-head-min:
+---
+
+# Rich Styling
+Rich Styling이란 텍스트를 작성함에 있어 다양한 꾸미기 기능이 지원되는 것을 말한다. 예를 들면 MARKDOWN을 통해 Rich Stylig을 작성할 수 있다.
+블로그에 적용할 에디터를 찾다가 Draft.js 와 CKEditor라는 것이 있었는데, 이번에는 Draft.js 써보기로 결심하면서 포스트를 작성하게 되었다.
+
+### Draft.js 예시
+기본적으로 Draft.js는 react와 react-dom이 설치되어 있어야되며 이후 draft-js를 npm 을 통해 설치해주면 된다.
+Draft.js를 사용하기 위해서는 아래의 코드를 집어넣어 render하면된다.
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Editor, EditorState} from 'draft-js';
+
+class MyEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {editorState: EditorState.createEmpty()};
+    this.onChange = (editorState) => this.setState({editorState});
+    this.setEditor = (editor) => {
+      this.editor = editor;
+    };
+    this.focusEditor = () => {
+      if (this.editor) {
+        this.editor.focus();
+      }
+    };
+  }
+
+  componentDidMount() {
+    this.focusEditor();
+  }
+
+  render() {
+    return (
+      <div style={styles.editor} onClick={this.focusEditor}>
+        <Editor
+          ref={this.setEditor}
+          editorState={this.state.editorState}
+          onChange={this.onChange}
+        />
+      </div>
+    );
+  }
+}
+
+const styles = {
+  editor: {
+    border: '1px solid gray',
+    minHeight: '6em'
+  }
+};
+
+ReactDOM.render(
+  <MyEditor />,
+  document.getElementById('container')
+);
+```
+
+
