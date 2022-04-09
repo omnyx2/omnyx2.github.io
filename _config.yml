@@ -7,15 +7,15 @@
 
 # Site settings
 title: CODE_ME
-email: your-email@domain.com
+email: omnyx2@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  안녕하세요, 저의 블로그 CODE ME는 제가 공부한 개발자적인 자료와 인문학적 자료를 정리하기 위해 만들었습니다.
+  시간나시면 천천히 들러서 읽어주시면 좋겠습니다. 현재 GIST에 재학중인 4학년입니다.  \\ 
+  감사합니다.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username: jekyll
 
 # Build settings
 markdown: kramdown
@@ -47,7 +47,6 @@ collections:
 #comments
 disqus: code-me
 
-
 # Defaults
 defaults:
   # _posts
@@ -71,7 +70,7 @@ defaults:
   #study
   - scope:
       path: "_studypage"
-      type: studypage      
+      type: studypage
     values:
       layout: post_relate
       read_time: true
@@ -93,6 +92,6 @@ defaults:
       path: "_refspage"
       type: refspage
     values:
-      layout: post_relate 
+      layout: post_relate
       read_time: true
       comments: true

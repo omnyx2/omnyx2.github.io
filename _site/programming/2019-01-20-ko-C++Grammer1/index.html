@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    #b1 {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      background-image: url(bg.jpg) no-repeat 50%
+        50%;
+    }
+  </style>
 
   <head>
   <meta charset="utf-8">
@@ -15,8 +24,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&amp;subset=korean" rel="stylesheet">
 </head>
-
-  
+ 
   <body>
     <header class="site-master-header">
     <div class="site-master-title">
@@ -29,8 +37,7 @@
 
     </div>
 </header>
-      
-    <header class="site-header" id="becomesticky">
+       <header class="site-header" id="becomesticky">
     <script>
 
 
@@ -98,32 +105,31 @@
 
     <!-- this is part where I fixed -->
     <div class="temp-content">
-        <section class="b1">
-          <!-- <div class="background-image">
+      <section class="b1">
+        <!-- <div class="background-image">
             
           </div> -->
-          <div class="in1">
-            <img src="../../images/bg.jpg" alt="">
-            <div class="landing-title">
-                <h1 class="post-title" itemprop="name headline">C++ 시작하기</h1>
-                <p class="post-meta">
-                  <time
-                    datetime="2019-01-20T00:00:00+09:00"
-                    itemprop="datePublished"
-                    >Jan 20, 2019</time
-                  >
-                </p>
-              <a class="button101" href="#">
-                GET STARTED
-              </a>
-            </div>
+        <div class="in1">
+          <!--             <img src="../../images/bg.jpg" alt=""> -->
+          <div class="landing-title">
+            <h1 class="post-title" itemprop="name headline">
+              C++ 시작하기
+            </h1>
+            <p class="post-meta">
+              <time
+                datetime="2019-01-20T00:00:00+09:00"
+                itemprop="datePublished"
+                >Jan 20, 2019</time
+              >
+            </p>
+            <a class="button101" href="#"> GET STARTED </a>
           </div>
-        </section>
-      </div>
-      <!-- this is part where I fixed -->
+        </div>
+      </section>
+    </div>
+    <!-- this is part where I fixed -->
     <div class="page-content">
-      <div class="post-content-outer">
-        <div class="sidebar-toc">
+      <div class="post-content-outer"><div class="sidebar-toc">
   
   <!-- you can change true to page.toc -->
   <button onclick="OpenSidebar()" id="OpenSidebarButton">Open</button>
@@ -140,11 +146,8 @@
         </h4>
       </header>
       <ul class="toc__menu">
-  <li><a href="#안녕-c">안녕? C++</a>
-    <ul>
-      <li><a href="#c-컴파일하기-실행하기">C++ 컴파일하기 실행하기</a></li>
-    </ul>
-  </li>
+  <li><a href="#안녕-c">안녕? C++</a></li>
+  <li><a href="#c-컴파일하기-실행하기">C++ 컴파일하기 실행하기</a></li>
 </ul>
     </nav>
   </aside>
@@ -166,25 +169,29 @@
     <div class="post-content" itemprop="articleBody">
       <h1 id="안녕-c">안녕? C++</h1>
 
-<p>C++는 더 좋은 프로그래머가 되기 위해서는 반드시 넘어가야 할 산임이 틀림없다. 많은 부분에서 프로그래밍을 공부할수록 언어의 장벽과 기술의 장벽을 느끼게 된다. 예를 들면 Django와 같은 프레임 워크를 공부하다 보면 어느순간 반드시 서버 내부 동작에 관해서 이해가 되지 않는 부분이 찾아오며 그때는 배움을 SQL, 네트워크 등으로 확장해나가야 겠다는 생각이드는데 이때 언제나 걸림돌이 되는 것이 C++이다. 컴퓨터의 할아버지격과도 같은 언어인 C++는  컴퓨터 시스템과 알고리즘들에 대한 공부를 위한 기초이며 완성된 기초들을 활용하기위한 툴 또한 즐비해 있다. 때문에 한층 높은 경지의 프로그래머가 되기 위해서는 C++의 배움은 매우 필수적이다.</p>
+<p>프로그래밍을 하다보면 자주 마주치지만 잘 모르는 언어를 꼽으라 한다면 1위는 C++일 것이다. 유년기 시절 C를 배우면서도 충분히 어려웠었는데, C++는 그것보다 더 어렵다는 말을 자주 들으며 배우기전에 포기했기 때문인지 지금도 C++는 내게 친숙한 언어가 아니다. 하지만 프로그래밍을 하다보면 어느샌가 엔진의 밑단을 보아야 하고 그런 소프트웨어의 엔진의 밑단을 살피다보면 어느 순간 C++는 내게 물씬 다가와 있다는 것을 느낀다. 때문에 C++에 대한 이해를 제대로 진행하지 않고서 밑단이 C++로 작성된 프로그램의 내부구조를 제대로 훝어보기란 어려우며, 나아가 더 높은 프로그래머로써의 경지로 나아가기에 큰 장애물임은 틀림없다. 이에 이번 기회에 C++를 정리하며 배워보고자 한다.</p>
 
 <h2 id="c-컴파일하기-실행하기">C++ 컴파일하기 실행하기</h2>
-<p>이부분은 윈도우 사용자이시라면 쉽게 넘어가셔도 됩니다. 윈도우는 간단한 C++ 컴파일 프로그램들이 많기 때문에(devC++)이 중 아무거나 다운받고 실행시키시면 될겁니다. 그리고 우분투 사용자 분들이시면 더 쉽게 할 수 있습니다. G++의 설치에 대해서 찾아 보시고 설치가 되어 있으시다면 다음을 따라합시다. 필자의 환경은 Ubuntu를 사용하여</p>
+<p>윈도우는 간단한 C++ 컴파일 프로그램들이 많기 때문에(devC++)이 중 아무거나 다운받고 실행시키시면 생각된다. 개인적으로는 문법을 배우는데 있어서 너무 무거운 툴보다는 가벼운 툴이면 만족스럽게 코딩하기에 더 좋으므로 Dev C++ 이나 CODE를 추천하나, 자신이 C++로 향후 어떤 프로젝트를 하기로 생각한다면 미리 VISUAL STUDIO를 통해 코딩을 진행하여 그 사용법을 숙지하는 것도 나쁘지는 않은 선택일 것이다. 하지만 어쨋건 여기의 글들을 따라하기에는 Dev C++이 가장 좋을 것이다. 우분투 사용자의 경우는 G++를 설치해야 하는데 설치에 대해서는 언급을 생략하고 넘어가도록 하겠다. 필자의 컴파일 환경을 환경은 Ubuntu를 사용하며, G++사용하여 코딩을 진행하고 있다.</p>
 
-<p>원하는 이름으로 CPP 파일을 만듭니다. IWANT.cpp 이렇게말이죠
-그리고</p>
+<p>G++를 이용해 컴파일 하는 과정은 아래와 같다.</p>
+
+<ol>
+  <li>원하는 이름으로 CPP 파일을 만듭니다. 예를 들어 IWANT.cpp를 만들었다 하자. 그리고</li>
+</ol>
 
 <p><code class="highlighter-rouge">g++ -o filename IWANT.cpp</code></p>
 
-<p>를 쳐주시면 컴파일이 되는데 이때 filename은 실행파일의 이름입니다. C++를 컴파일하고 실행시켜 보기위한 실행파일인거죠. 때문에 filename이 아닌 그 어떤 다른 이름이 와도 크게 상관이 없답니다.</p>
+<p>를 쳐주시면 컴파일이 된다. 이때 filename은 실행파일의 이름입니다. 초보자가 헷갈릴 수 있는점은 실행파일은 .exe파일을 만들고 cpp파일은 우리가 코딩한  파일이라는 점이다. 나는 filename으로는 abc를 쳐보겠다.</p>
 
 <p><code class="highlighter-rouge">g++ -o abc IWANT.cpp</code></p>
 
-<p>이렇게 말이죠. 그리고 이 실행파일을 실행시키는 법은 단순합니다.</p>
+<p>이렇게 치게되면 IWANT.cpp에 적은 내용이 컴파일러에 의해 abc라는 실행파일이 만들어져 있다. 이를 실행시키기 위해서는</p>
 
 <pre><code class="language-./filename```">
-을 터미널에 입력해 주시면 실행이 됩니다.
+을 터미널에 입력해 주시면 실행된다.
 
+아래는 좀 더 복잡한 내용의 실행 파일이다.
 
 ## Hello World
 
@@ -291,61 +298,61 @@ var disqus_config = function () {
 
 
 
-  </script>
-      </div>
+  </script></div>
     </div>
 
     <footer class="site-footer">
-
   <div class="wrapper">
-
     <h2 class="footer-heading">CODE_ME</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>CODE_ME</li>
-          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>나에 대한 기록</li>
+          <li><a href="mailto:omnyx2@gmail.com">omnyx2@gmail.com</a></li>
           <li>
-              <div class="middle">
-                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a class="btn" href="https://www.twitter.com">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a class="btn" href="https://www.google.com">
-                    <i class="fab fa-google"></i>
-                  </a>
-                  <a class="btn" href="https://github.com/omnyx2">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a class="btn" href="https://www.youtube.com">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </div>
+            <div class="middle">
+              <a
+                class="btn"
+                href="https://www.facebook.com/profile.php?id=100006198198697"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/hyunseok-ryu-376534170/"
+              >
+                <i class="fab fa-brands fa-linkedin-in"></i>
+              </a>
+              <a class="btn" href="https://www.google.com">
+                <i class="fab fa-google"></i>
+              </a>
+              <a class="btn" href="https://github.com/omnyx2">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="btn" href="https://www.youtube.com">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
           </li>
         </ul>
       </div>
-    
-     
-      
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+        <p>안녕하세요, 저의 블로그 CODE ME는 제가 공부한 개발자적인 자료와 인문학적 자료를 정리하기 위해 만들었습니다. 시간나시면 천천히 들러서 읽어주시면 좋겠습니다. 현재 GIST에 재학중인 4학년입니다. 감사합니다.
 </p>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          
-        </ul>
+        <ul class="social-media-list"></ul>
       </div>
     </div>
   </div>
-
 </footer>
 
-    <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
+    <script
+      id="dsq-count-scr"
+      src="//code-me.disqus.com/count.js"
+      async
+    ></script>
   </body>
-
 </html>

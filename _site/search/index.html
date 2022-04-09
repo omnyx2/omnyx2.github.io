@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>CODE_ME</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  <meta name="description" content="안녕하세요, 저의 블로그 CODE ME는 제가 공부한 개발자적인 자료와 인문학적 자료를 정리하기 위해 만들었습니다. 시간나시면 천천히 들러서 읽어주시면 좋겠습니다. 현재 GIST에 재학중인 4학년입니다. 감사합니다.
 ">
 
   <link rel="stylesheet" href="/css/main.css">
@@ -124,7 +124,7 @@
         "date": "Jan 20, 2019",
         "author": "",
         "category": "",
-        "content": "안녕? C++C++는 더 좋은 프로그래머가 되기 위해서는 반드시 넘어가야 할 산임이 틀림없다. 많은 부분에서 프로그래밍을 공부할수록 언어의 장벽과 기술의 장벽을 느끼게 된다. 예를 들면 Django와 같은 프레임 워크를 공부하다 보면 어느순간 반드시 서버 내부 동작에 관해서 이해가 되지 않는 부분이 찾아오며 그때는 배움을 SQL, 네트워크 등으로 확장해나가야 겠다는 생각이드는데 이때 언제나 걸림돌이 되는 것이 C++이다. 컴퓨터의 할아버지격과도 같은 언어인 C++는  컴퓨터 시스템과 알고리즘들에 대한 공부를 위한 기초이며 완성된 기초들을 활용하기위한 툴 또한 즐비해 있다. 때문에 한층 높은 경지의 프로그래머가 되기 위해서는 C++의 배움은 매우 필수적이다.C++ 컴파일하기 실행하기이부분은 윈도우 사용자이시라면 쉽게 넘어가셔도 됩니다. 윈도우는 간단한 C++ 컴파일 프로그램들이 많기 때문에(devC++)이 중 아무거나 다운받고 실행시키시면 될겁니다. 그리고 우분투 사용자 분들이시면 더 쉽게 할 수 있습니다. G++의 설치에 대해서 찾아 보시고 설치가 되어 있으시다면 다음을 따라합시다. 필자의 환경은 Ubuntu를 사용하여원하는 이름으로 CPP 파일을 만듭니다. IWANT.cpp 이렇게말이죠그리고g++ -o filename IWANT.cpp를 쳐주시면 컴파일이 되는데 이때 filename은 실행파일의 이름입니다. C++를 컴파일하고 실행시켜 보기위한 실행파일인거죠. 때문에 filename이 아닌 그 어떤 다른 이름이 와도 크게 상관이 없답니다.g++ -o abc IWANT.cpp이렇게 말이죠. 그리고 이 실행파일을 실행시키는 법은 단순합니다.을 터미널에 입력해 주시면 실행이 됩니다.## Hello World#includeint main(void){int var = 0;  std::cout«“HelloWorld«endl;  std::cin«var;  std::cout«var«endl;}```",
+        "content": "안녕? C++프로그래밍을 하다보면 자주 마주치지만 잘 모르는 언어를 꼽으라 한다면 1위는 C++일 것이다. 유년기 시절 C를 배우면서도 충분히 어려웠었는데, C++는 그것보다 더 어렵다는 말을 자주 들으며 배우기전에 포기했기 때문인지 지금도 C++는 내게 친숙한 언어가 아니다. 하지만 프로그래밍을 하다보면 어느샌가 엔진의 밑단을 보아야 하고 그런 소프트웨어의 엔진의 밑단을 살피다보면 어느 순간 C++는 내게 물씬 다가와 있다는 것을 느낀다. 때문에 C++에 대한 이해를 제대로 진행하지 않고서 밑단이 C++로 작성된 프로그램의 내부구조를 제대로 훝어보기란 어려우며, 나아가 더 높은 프로그래머로써의 경지로 나아가기에 큰 장애물임은 틀림없다. 이에 이번 기회에 C++를 정리하며 배워보고자 한다.C++ 컴파일하기 실행하기윈도우는 간단한 C++ 컴파일 프로그램들이 많기 때문에(devC++)이 중 아무거나 다운받고 실행시키시면 생각된다. 개인적으로는 문법을 배우는데 있어서 너무 무거운 툴보다는 가벼운 툴이면 만족스럽게 코딩하기에 더 좋으므로 Dev C++ 이나 CODE를 추천하나, 자신이 C++로 향후 어떤 프로젝트를 하기로 생각한다면 미리 VISUAL STUDIO를 통해 코딩을 진행하여 그 사용법을 숙지하는 것도 나쁘지는 않은 선택일 것이다. 하지만 어쨋건 여기의 글들을 따라하기에는 Dev C++이 가장 좋을 것이다. 우분투 사용자의 경우는 G++를 설치해야 하는데 설치에 대해서는 언급을 생략하고 넘어가도록 하겠다. 필자의 컴파일 환경을 환경은 Ubuntu를 사용하며, G++사용하여 코딩을 진행하고 있다.G++를 이용해 컴파일 하는 과정은 아래와 같다.  원하는 이름으로 CPP 파일을 만듭니다. 예를 들어 IWANT.cpp를 만들었다 하자. 그리고g++ -o filename IWANT.cpp를 쳐주시면 컴파일이 된다. 이때 filename은 실행파일의 이름입니다. 초보자가 헷갈릴 수 있는점은 실행파일은 .exe파일을 만들고 cpp파일은 우리가 코딩한  파일이라는 점이다. 나는 filename으로는 abc를 쳐보겠다.g++ -o abc IWANT.cpp이렇게 치게되면 IWANT.cpp에 적은 내용이 컴파일러에 의해 abc라는 실행파일이 만들어져 있다. 이를 실행시키기 위해서는을 터미널에 입력해 주시면 실행된다.아래는 좀 더 복잡한 내용의 실행 파일이다.## Hello World#includeint main(void){int var = 0;  std::cout«“HelloWorld«endl;  std::cin«var;  std::cout«var«endl;}```",
         "url": "/programming/2019-01-20-ko-C++Grammer1/"
       },
     
@@ -209,9 +209,18 @@
         "url": "/programming/2019-03-13-ko-jekyll-mathjax/"
       },
     
+      "programming-2019-09-27-ko-vimstudy": {
+        "title": "Ko Vimstudy",
+        "date": "Sep 27, 2019",
+        "author": "",
+        "category": "",
+        "content": "vim의 기본적인 플러그인 설치https://nolboo.kim/blog/2016/09/20/vim-plugin-manager-vundle/여기 잘 나와있다.다만 Vundle 보다 한국의 빔신으로 불리는 사람이 엄청빠른 플러그인 관리 툴을 만들어내어 Vundle보다 그것을 쓰는 것도 좋은 선택지이다.나또한 그 플러그인을 사용하고 있다.  junegunn/vim-plug: Minimalist Vim Plugin Manager",
+        "url": "/programming/2019-09-27-ko-vimstudy/"
+      },
+    
       "programming-20190-01-20-ko-coseraml": {
         "title": "20190 01 20 Ko Coseraml",
-        "date": "Jul 29, 2019",
+        "date": "Apr 9, 2022",
         "author": "",
         "category": "",
         "content": "Window object and BOMWindowWindow object is that handling whole browser. Such as tabs, scroll, History etc… Window object can touch browser. And also Window object have these features  It is global object, and parent of all objects  So it can be skip, like window.onscroll() -&gt; just onscroll()  It hold every variable that you made  Finally, it contains basic variable types, String, Boolean, Object, Number, Function, Array  I’m not sure about this but I think that it’s first class citizen윈도우 객체는 브라우저 전체를 다룹니다. 예를 들면 탭, 스크롤, 주소창 등등 브라우저 전부를 다룰 수 있는  객체라 할 수 있습니다. 그리고 또한 아래의 특징을 지닙니다.  모든 객체의 조상이 되는 전역변수입니다.  때문에 윈도우 객체는 생략될 수 있습니다. 다음과 같이 window.onscroll() -&gt; onscroll() 처럼 간단히 쓸수 있습니다.  사용자가 만든 모든 변수를 자신 안에 등록시킵니다.  마지막으로 이것은 기본 자바스크립트의 자료형, String, Boolean, Object, Number, Function, Array을 포함합니다.  이것은 확실한 것은 아닙니다만, 위의 특성과 함께 자기 자신을 반환할 수 있다면, window 객체는 1급 객체입니다.DOM(Document Object Model)Document object is handling website. Therefore Window object include Document object.It is programming interface of HTML and XML document. DOM provide some ways that programming language can be access document. It controlls content in &lt;body&gt;, below is a part of DOM methodsDocument는 웹사이트를 다루는 오브젝트로써 Window object일부로 생각하면 됩니다. DOM은 HTML과 XML document에 대한 프로그래밍 인터페이스이라고 할 수 있는데요. DOM은 프로그래밍 언어가 document에 접근하여 body내부의 내용을 조작할 수 있습니다.아래는 DOM의 메소드들 중 일부의 예시 입니다.on scroll EventExcute a JavaScript when a &lt;div&gt; elements is being scrolled&lt;div&gt; 요소가  스크롤 됬을때 자바스크립트를 실행한다.&lt;div onscroll=\"myFunction()\"&gt;HTML DOM getElementById()This method returns element objects which have specific id valuedocument.getElementById(\"demo\");And we can add attribute by using .function myFunction() {  var x = document.getElementById(\"demo\");  x.style.color = \"red\";}  origin:&lt;p id=\"demo\"&gt;  Click the button to change the color of this paragraph.&lt;/p&gt;&lt;button onclick=\"myFunction()\"&gt;Try it&lt;/button&gt;result:&lt;p id=\"demo\" style=\"color: red;\"&gt;  Click the button to change the color of this paragraph.&lt;/p&gt;&lt;button onclick=\"myFunction()\"&gt;Try it&lt;/button&gt;nodeNameGet the node name of a elepents:for example:&lt;button onclick=\"myFunction()\"&gt;Try it&lt;/button&gt;&lt;p id=\"demo\"&gt;&lt;/p&gt;&lt;script&gt;function myFunction() {  var x = document.documentElement.nodeName;  document.getElementById(\"demo\").innerHTML = x;}&lt;/script&gt;sresult:PdocuemntElement PropertyReturn the documentElement of the document, as a node name:var x = document.documentElement.nodeName;return:HTMLIn addition it returns HTML or XML or some kind of things. But, In the most it will return HTML.innerHTML PropertyChange HTML content of element with idBOM(Browser Object Model)It’s a Browser Object Model which is made for communicating between brower and JS.BOM은 자바 스크립트와 브라우저가 통신할 수 있게 해줍니다. favorite이나 주소창 그런것들을 사용할 수 있게 해줍니다.",
@@ -273,6 +282,16 @@
         "url": "/math/2019-03-13-linear-algebra_chap_4/"
       },
     
+    
+      "2020-03-13-19teen-western-history-hw-html": {
+        "title": "19teen Western History Hw",
+        "date": "Mar 13, 2020",
+        "author": "",
+        "category": "",
+        "content": "오늘날 ‘민족’이라는 용어가 너무나 광범위하고도 부정확하게 쓰이기 때문에 민족주의라는 어휘를 사용하는 것이 사실상 거의 의미가 없다. 그러나 ‘민족문제’에 접근할 때, “‘민족’이 지칭하는 실체보다는 ‘민족’ 즉 ‘민족주의’의 개념에서 출발하는 것이 유익하다.1) 필자는 ‘민족주의’ 용어를 어니스트 겔너가 규정한 의미로 사용한다. 즉, “ 지복적으로 정치적, 민족적 단위가 일치해야 한다는 원칙을 의미한다”. 덧붙여 이 원칙은 또한 루리테이니아 민족을 포괄하고 대표하는 정체에 대해 루리테이니아인들의정치적 의무는 여타의 공공 의무, 그리고 극단적인 경우에는 모든 다른 의무에 앞선다는 점을 함축한다. 이 함의는 우리가 또한 살피게 될 요건이 덜 까다로운 다른 형태의 민족적 또는 집단적 일체감과 근대 민족주의를 구분 짓는다.2) 민족주의가 민족에 앞선다. 민족주의가 있고 민족이 생기는 것이다.2장) 대중적 원형민족주의민족을 구분하는 기준으로는 많은 것을 들 수 있지만 가장 역사적 소속의식이 가장 강력한 원형민족적의 접착제이다. 특히 이 저박제는 러시아인, 영구인 또는 까스 띨랴인과같은 특수한 국민과 결합할 때 특히 강해졌다. 다만 여기서 민족적 역사성의 직,간접적 결과는 명백히 부분 되어야 한다. 그러한 까닭은 정치적 민족과 근대 민족에 혼동이 없게 하기 위함이다.3) 정부의 시각그러나 정부가 군주정의형태에서 근대 국가로 넘어가면서 국민과 정부를 직접적으로 연결해야 했다. 이러한 것이 국가에 대한 애국주의를 가질 수 있게 교육된 사람을 말하는 것이다. 가장 중요한 것은 국가로 넘어가면서 국민이 행하는 의무가 커지며 발언권 또한 자연스래 커졌다. 다만 이것은 역설적으로 국가가 민중에 대한 존중이 없을 경우 폭도로 돌아설수 있게 되었다는 점이였다. 떄문에 국가는 민중을 교육을 통해 애국주의를 기르고 통제하고자 한다.4) 민족주의의 변화1880년 ~ 1914년의 민족주의는 세가지 주요한 점에서 마찌니 시대의 민족주의와 다르다. 첫째, 후기 민족주의는 자유주의 시대의 민족주의에 중심요소인 ‘규모의원칙’을 포기했다. 그리하여 1880년 이후 자신들을 ‘민족’으로 생가하는 민족집단은 모두 한결같이 민족자결을 회쳤다. 민족가졀이란 결국 자기의 영토에내에 하나의 분리된 주권 독립국가를 가질 권리를 말한다. 둘째, 잠재적인 ‘ 비역사적’ 민족이 이처럼 늘어난 결과, 종족과 언어가 잠재적 민족성의 줌시적, 나아가 결정적이거나 심지어 유일한 판단기준마저 되었다. 그러나 서번째 변화는 이제 점차로 많아지고 야심적이 된 비국가적 민족운도들 보다 기존의 민족국가 내의 민족감정에 끼친 영향을 말한다. 19세기의 마지막 20년간 실제 로 발명된 ‘민족주의’는 민족과 국기에 대한 정치적 권리를 주장하는 방향으로 급선회 하였다. 레너의 인용글은 앞의 두변화는 대변하지만(좌파로부터 일어난) 세번째 변화는 명백히 보여주지 못했다.그 까달은 종족-언어적 기준이 실제로 지배적이 된것이 얼마나 늦었느지를 깨닫지 못했기 때문이다. 그리고 그러했던 배경에는 다음의 3가지 이유가 있다.아무튼 위의 마찌니의 민족주의 다음으로는 언어적 민족주의가 그 자리를 차지하게 되었다.발칸반도에서, 이 지역에 사는 여러 민족이 그들의 언어에 의해 구분되어야 한다는 발상은 세르비아, 그리스, 불가리아, 그리고 ㅗ불가리아를 지지한 터기 왕국등에 국들에 먹여 들지 않았다. 이들은 중세에서 고대까지의 역사에 기반을 둔 주장들, 또는 공통의 관습과 예시고가 관련된 민족지적  주장을 근거로 구분되었다. 이러한 지형에서 타민족과 경쟁할 수 없었던 그리스 인들이 가상의 종족기준을 가종함으로써 자기들의 약점을 보완하려 했던 20세기까지, 마케도니아는 슬라브 언어학자들의 격전장이 아니였다.동시에 –대략  19세기 후반 – 종족적 민족주의는 실제로는 점증하는 대량잊에 의해 이론적으로는 19세기 사회과학의 중심 개념인 인종의 변화에 의해 막각 해졌다.  인류를 피부빛에 의해 몇개의 인종으로 나누던 오랜 방식은 이제 흡사한 엷은 피부의 백인을 아리아인과 셈족, 또는 아이라인을 다시 북유럽인 알프스 인종 그리고 지중해인 등으로 세분화하는 인종적 구분으로 정교하게 다음어지고, 다른 한편 나중에 유전학에 의해 보완된 다윈의 진화론은 이방인을 따돌리거나 심지어 실제로 몰아내고 살상하는 데 대한 설득력있는 ‘과학적’논리를 갗춘 인종주의를 제공했다.\\그러나 앞장에서 주장하려 했듯이, 민족주의는 그것으 유일한 정치저 지상명제로 믿는 사람들과 동일시 될 수 없으며, 이 시기에 그렇게 될 수 도 없었다. 앞에서 본 것처럼, 민족주의는 민족적 일체가므이, 또는 시민의 권리와 의무라는 관점에서 말하면, 애국주의의 유일한 형태는 아니였다. 국가의 배타적 민족주의나 모든 다른 형태의 정치적 사회적 일체감을 대체한 우익 정체 정치운동과, 현대 국가에서 모든 다른 정치적 감정이 자라나는 통양르 형성하는 복합적인 민족/시민적 사회의식을 구별하는 것이  중요하다. 이런 뜻에서 민족과 계급은 쉬이 분리되지 않았다. 계급 의식이 실제로 시민-민족적 차원을 포함한다는 사실, 그리고 시민-민족적 또는 종종적 의식이 사회의 차원ㅇ르 갖는다는 것을 인정한다면, 제 1차 세계대전 후의 유럽에서 노동 계급의 급진화가 그들으 ㅣ잠재적 민족의식을 강화했을 것이라고 생각할 수 있다.사회적 형명과 애국심의 재결합은 극히 복합적인 현상이었다. 이러한 것에 대해서는 연구가 더 진척되기를 기다려야 겠으나 적어도 다음 몇가지는 언급할 수 있따. 첫째, 반파쇼 민족주의는 국젲적인 이데올로기적 내전의 맥락에서 등장했다. 이 내전에서 수많은 민족적 지배게급 일부는 우익의 국제적인 ㄷ정치적 동맹과 그와 제휴한 국가들을 선택했다.둘쨰, 노동자와 지식인 모두 또한 국제주의적 선택을 했다.그러나 그 그러한 서택은 결과적으로 민족주의적 감정을 강화하였다.  셋째, 제 2차 세ㅖ대전이 끝날 무렵 분명해진 것처럼 반파쇼 민족주의는 민족적 갈등뿐 아니라 사회적 갈등과도 명백히 관련되었다.민족주의는 이처럼 반파쇼 기간에 좌파와 강력한 연계를 맺었고, 이 연계는 후에 식민직에서 반제국주의적 투쟁에 의해 강화되었다.대대적이며 다ㅡㅇ적인 인구 이동과 변도에 기반을 둔 도시화와 산업화는 기본적으로 종족적, 문화적 및 언어적인 면에서 동질한 인구가 거주하는 영토에 대한 민족주의의 기분 가정을 허물어 트린다. 이는 ‘ 낯선 사람들’의 대량유입에 대한 이민 수입국 또는 징ㄱ의 토착주민의 극심한 외국인 혐오증 및 인종주의는 불행하게되 1890년대 이후의 민국에서 그리고 1950년대 후의 ㅓ유럽에서 익히 알려져 있다.언어적 민족주의의 고전적인 유형, 즉 한 종족의 언어가 새로운 만능의 표준 ‘민족적’ 문어로 발전하여 공용어가 되는 것이 계쇧거나 될 수 있다ㅡㄴㄴ 주장은 결코 확실치 않다. 특히 책 206~207 을 참조하면 이러한 사실에 대해서 잘 나와있따.결론적으로 간단히 말하면, 종족적, 언어적 민족주의 는 각기 다른 방향으로 진행할 수 잇으며, 둘 다 오늘날 민족적 국가권력에 점차 덜 의존해 각 ㅗ잇다.나아가 1880년 1950년 동안 식민지 경계가 다른 기준이 없는 상황에서 그대로 신생국 구경이 되었듯이, 역설적이게도 레닌이 월슨과 공유한 ‘민족’과 민족 열망에 대한 정의는 ~~. 우리는 소련의 예를 더 잘 알 고 있다. 소련의 공산당 정부는 의도적으로 아시아 이슬람교인들또는 빌로러시아인ㅇ 사이에 역사적 전례가 없는, 종적과 언어에 기초를 둔 영토적인 ‘민족적 행정단되’ , 근대적인 의미의 민족을 ‘조성하였다. 213p",
+        "url": "/2020/03/13/19teen-western-history-HW.html"
+      }
+      ,
     
       "2019-06-10-east-aisa-history-for-test-html": {
         "title": "East Aisa History For Test",
@@ -354,53 +373,51 @@
     </div>
 
     <footer class="site-footer">
-
   <div class="wrapper">
-
     <h2 class="footer-heading">CODE_ME</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>CODE_ME</li>
-          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>나에 대한 기록</li>
+          <li><a href="mailto:omnyx2@gmail.com">omnyx2@gmail.com</a></li>
           <li>
-              <div class="middle">
-                  <a class="btn" href="https://www.facebook.com/profile.php?id=100006198198697">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a class="btn" href="https://www.twitter.com">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a class="btn" href="https://www.google.com">
-                    <i class="fab fa-google"></i>
-                  </a>
-                  <a class="btn" href="https://github.com/omnyx2">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a class="btn" href="https://www.youtube.com">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </div>
+            <div class="middle">
+              <a
+                class="btn"
+                href="https://www.facebook.com/profile.php?id=100006198198697"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/hyunseok-ryu-376534170/"
+              >
+                <i class="fab fa-brands fa-linkedin-in"></i>
+              </a>
+              <a class="btn" href="https://www.google.com">
+                <i class="fab fa-google"></i>
+              </a>
+              <a class="btn" href="https://github.com/omnyx2">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="btn" href="https://www.youtube.com">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
           </li>
         </ul>
       </div>
-    
-     
-      
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+        <p>안녕하세요, 저의 블로그 CODE ME는 제가 공부한 개발자적인 자료와 인문학적 자료를 정리하기 위해 만들었습니다. 시간나시면 천천히 들러서 읽어주시면 좋겠습니다. 현재 GIST에 재학중인 4학년입니다. 감사합니다.
 </p>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          
-        </ul>
+        <ul class="social-media-list"></ul>
       </div>
     </div>
   </div>
-
 </footer>
 
     <script id="dsq-count-scr" src="//code-me.disqus.com/count.js" async></script>
