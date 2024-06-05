@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;  --color-cover-beige: linear-gradient(220deg, #F5F5DC, #E3E3D1);
+  --color-cover-terracotta: linear-gradient(220deg, #E2725B, #C96048);
+  --color-cover-olive: linear-gradient(220deg, #708238, #5F6F2E);
+  --color-cover-dusty-blue: linear-gradient(220deg, #8CA6DB, #738CBD);
+  --color-cover-sand: linear-gradient(135deg, #C2B280, #AFA073);
+
+}
+
+svg {
+    @apply fixed top-0 left-0 w-full h-screen;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+ .responsive-paper-size-width {
+    @apply w-[125px] 2xl:w-[225px] xl:w-[175px] lg:w-[150px] md:w-[125px];
+  }
+  .responsive-paper-size-height {
+    @apply h-[150px] 2xl:h-[300px] xl:h-[250px] lg:h-[200px] md:h-[150px];
+  }
+  .responsive-paper-size{
+    @apply responsive-paper-size-width responsive-paper-size-height;
+  }
+  .responsive-text-size-h1{
+    @apply 2xl:text-9xl xl:text-8xl lg:text-6xl md:text-5xl sm:text-4xl text-4xl;
+  }
+  .responsive-text-size-h2{
+    @apply 2xl:text-6xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl;
+  }
+  .responsive-screen-padding{
+    @apply 2xl:px-40 xl:px-36 lg:px-32 md:px-24 sm:px-16;
+  }
+ .paper-texture-1-rot {
+    background: url('/image/paper-texture/2-rot.jpg'), linear-gradient(220deg, rgba(238,238,238,1), rgb(195, 29, 29));  
+    background-blend-mode: overlay;
+    background-size: cover;
+    filter: brightness(1) contrast(1)  grayscale(10);
+  }
+ .paper-texture-1 {
+    background: url('/image/paper-texture/9.jpg'),  linear-gradient(220deg, rgba(238,238,238,1), rgba(155,155,155,1));
+    background-blend-mode: overlay;
+    background-size: cover;
+    filter: contrast(1) brightness(2) ;
+
+  }
+  .paper-texture-3 {
+    background: url('/image/paper-texture/4.jpg'),  linear-gradient(220deg, rgba(155,155,155,1), rgba(155,155,155,1));
+    background-blend-mode: overlay;
+    background-size: cover;
+    filter: contrast(1) brightness(1) 
+    
+  }
+  .background-image-center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+   .background-image-left{
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.4)
+  }
+  .background-image-right{
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: inset 7px 0 9px -7px rgba(0,0,0,0.4)
+  }
+  .make-paper-inset {
+    box-shadow: inset -7px 2px 9px -7px rgba(0,0,0,0.4)
+  }
+
+  .responsive-text {
+    font-size: 1vh;
+  }
+  .responsive-text-2 {
+    font-size: 1.25vh;
+  }
+  .article-p{
+    @apply font-article responsive-text;
+    word-spacing: 4px;
+  	text-indent: 2em;
+  	text-align: justify;
+  	hyphens: auto;
+	  font-weight: 400;
+  }
+  .article-p-2{
+    @apply font-article responsive-text;
+    word-spacing: 0px;
+  	text-indent: 2em;
+  	text-align: justify;
+  	hyphens: auto;
+	  font-weight: 400;
+  }
+  .article-p-3{
+    @apply font-article responsive-text-2;
+    word-spacing: 0px;
+  	text-indent: 2em;
+  	text-align: justify;
+  	hyphens: auto;
+	  font-weight: 400;
+  }
+  .animate-fade{
+    @apply animation-fadeIn;
+  }
+}
+
+@layer base {
+  .responsive-text-size-h0{
+    @apply 2xl:text-[6rem] xl:text-[4rem] lg:text-[4rem] md:text-[3rem] sm:text-[2rem] text-[2rem];
+  }
+
+}
+
+.moleskine-wrapper:hover p{
+    opacity: 1;
+    transition: ease-in 0.4s opacity;
+}
+
+.rotate-z--10:hover {
+      transform: rotateZ(-10deg);
+    }
+.rotate-y--50:hover .notebook-cover {
+      transform: rotateY(-50deg);
+      z-index: 999;
+      box-shadow: 20px 10px 50px rgba(0,0,0,0.2);
+    }
+
+.note-skin{
+      box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+}
+.notebook-skin::before {
+      content: '';
+      position: absolute;
+      width:100%;
+      height: 10px;
+      left: 0;
+      bottom: -10px;
+      background: #cddc39;
+      font-family: "Fleur De Leah", cursive;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.custom-gradient {
+      background: linear-gradient(to right, #a03e3b 0%, #cc4b48 12%, #a03e3b 25%, #cc4b48 37%, #a03e3b 50%, #cc4b48 62%, #a03e3b 75%, #cc4b48 87%, #a03e3b 100%);
+    }
+.custom-gradient-blue {
+      background: linear-gradient(to right, #276f82 0%, #2e95aa 12%, #276f82 25%, #2e95aa 37%, #276f82 50%, #2e95aa 62%, #276f82 75%, #2e95aa 87%, #276f82 100%);
+    }
+.custom-gradient-green {
+      background: linear-gradient(to right, #8b9e97 0%, #abc3b5 12%, #8b9e97 25%, #abc3b5 37%, #8b9e97 50%, #abc3b5 62%, #8b9e97 75%, #abc3b5 87%, #8b9e97 100%);
+    }
+.custom-gradient-yellow {
+      background: linear-gradient(to right, #c8ab48 0%, #fed754 12%, #c8ab48 25%, #fed754 37%, #c8ab48 50%, #fed754 62%, #c8ab48 75%, #fed754 87%, #c8ab48 100%);
+    }
+.notebook-page-ruled {
+      background: linear-gradient(to bottom, #fbfae8 9px, #e4e4e4 1px);
+      background-size: 100% 10px;
+}
+.notebook-page-squared {
+      background-image: linear-gradient(#e4e4e4 1px, transparent 1px), linear-gradient(90deg, #e4e4e4 1px, transparent 1px);
+      background-size: 10px 10px, 10px 10px;
+    }
+.notebook-page-dotted {
+      background: linear-gradient(90deg, #fbfae8 10px, transparent 1%) center, linear-gradient(#fbfae8 10px, transparent 1%) center, #999;
+      background-size: 11px 11px;
+}
+
+
+
+@layer responsive-paper-size{
+}

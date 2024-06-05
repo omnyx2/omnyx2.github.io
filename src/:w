@@ -1,0 +1,49 @@
+// pages/index.js
+
+import Head from 'next/head'
+
+export default function Home() {
+  return (
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+      <Head>
+        <title>My Resume</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className="container mx-auto p-8 rounded-lg shadow-lg color-black">
+        <div className="absoulte mx-auto min-h-screen paper-texture-1"/>
+        <h1 className="text-3xl font-bold mb-4">Jane Doe</h1>
+        <p className="text-lg text-gray-600 mb-8">Frontend Developer</p>
+        
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-2">Experience</h2>
+          <div>
+            <h3 className="text-lg font-semibold">Frontend Developer</h3>
+            <p className="text-gray-600">ABC Company - Jan 2020 to Present</p>
+            <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-2">Education</h2>
+          <div>
+            <h3 className="text-lg font-semibold">Bachelor of Science in Computer Science</h3>
+            <p className="text-gray-600">XYZ University - Graduated in 2019</p>
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <h2 className="text-xl font-bold mb-2">Skills</h2>
+          <ul className="list-disc list-inside">
+            <li className="text-gray-600">JavaScript</li>
+            <li className="text-gray-600">React.js</li>
+            <li className="text-gray-600">HTML</li>
+            <li className="text-gray-600">CSS</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  )
+}
+
+
