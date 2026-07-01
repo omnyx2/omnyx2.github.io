@@ -52,12 +52,8 @@ export default function Home() {
        <div className="flex flex-row items-center justify-between responsive-screen-padding">
      <Book title={"Tech Stack"} lineType={"squared"} color={"bg-nccs"} subtitle={"To Be Realiable"} toUrl={"stack"}/>
      <Book title={"My CV"} lineType={"ruled"} color={"bg-black"}subtitle={"Work hard"} toUrl={"cv"}/>
-     <a className="  max-w-[25%] min-w-[10em]" href="https://typer.notion.site/17f9fc5379604ce0b0e5f9ea1870d8ff?pvs=4" target="_blank" rel="noopener noreferrer">
-       <BookA title={"Projects"} lineType={"dotted"} color={"bg-ncct"} subtitle={"Make Result"} toUrl={"projects"}/>
-      </a>
-      <a className=" max-w-[25%] min-w-[10em]" href="https://typer.notion.site/NLP-10411c378ddf44bfb88757b8b3c27b81?pvs=4" target="_blank" rel="noopener noreferrer">
-       <BookA title={"AI"} lineType={"dotted"} color={"bg-ncco"} subtitle={"Step On Ground"} toUrl={"articles"}/>
-     </a>
+     <Book title={"Projects"} lineType={"dotted"} color={"bg-ncct"} subtitle={"Make Result"} toUrl={"projects"}/>
+     <Book title={"AI"} lineType={"dotted"} color={"bg-ncco"} subtitle={"Step On Ground"} toUrl={"ai"}/>
     </div>
       
     </main>

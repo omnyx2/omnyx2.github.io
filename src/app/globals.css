@@ -101,6 +101,28 @@ body {
     box-shadow: inset -7px 2px 9px -7px rgba(0,0,0,0.4)
   }
 
+  /* wooden desk surface — a centered patch that sits over the homepage background */
+  .wood-desk {
+    background-color: #5c3b1e;
+    background-image: url('/image/wood.svg');
+    background-repeat: repeat;
+    background-size: 320px 1200px;
+    /* desk depth: darkened edges + vignette so it reads as a solid surface */
+    box-shadow:
+      inset 22px 0 40px -18px rgba(0,0,0,0.8),
+      inset -22px 0 40px -18px rgba(0,0,0,0.8),
+      inset 0 0 120px rgba(0,0,0,0.35),
+      12px 0 28px rgba(0,0,0,0.45),
+      -12px 0 28px rgba(0,0,0,0.45);
+  }
+  /* soft shadow slots at the top/bottom of the desk so the paper reads as being pulled through */
+  .desk-slot-top {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0));
+  }
+  .desk-slot-bottom {
+    background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0));
+  }
+
   .responsive-text {
     font-size: 1vh;
   }
