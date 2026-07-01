@@ -56,12 +56,19 @@ function Chip({ children }) {
 
 export default function AI() {
   return (
-    // "desk" — fills the whole scroll height so the default gradient never shows
-    <div className="min-h-screen w-full bg-notebookBackground py-10 sm:py-16 font-main text-dark">
-      {/* one continuous sheet of paper */}
-      <div className="relative max-w-3xl mx-auto bg-notebookPage shadow-custom rounded-[2px] px-8 sm:px-14 py-12">
-        {/* notebook margin line */}
-        <div className="absolute top-0 left-6 sm:left-10 h-full w-[1px] bg-orange/30" />
+    // transparent root — the homepage animated background shows through at the sides
+    <div className="relative min-h-screen w-full font-main text-dark">
+      {/* fixed wooden desk patch sitting over the homepage background */}
+      <div className="wood-desk fixed top-0 bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] z-0" aria-hidden="true">
+        <div className="desk-slot-top absolute top-0 left-0 w-full h-16" />
+        <div className="desk-slot-bottom absolute bottom-0 left-0 w-full h-16" />
+      </div>
+
+      {/* the long paper is pulled across the desk as you scroll */}
+      <div className="relative z-10 py-8 sm:py-20">
+        <div className="relative max-w-2xl mx-4 sm:mx-auto bg-notebookPage shadow-custom rounded-[2px] px-6 sm:px-14 py-10 sm:py-12">
+          {/* notebook margin line */}
+          <div className="absolute top-0 left-4 sm:left-10 h-full w-[1px] bg-orange/30" />
 
         <header>
           <Link href="/" className="font-notoserif text-sm text-dark/60 hover:text-dark">← Home</Link>
@@ -96,6 +103,7 @@ export default function AI() {
           <a href="https://www.linkedin.com/in/hyunseok-ryu-376534170/" target="_blank" rel="noopener noreferrer" className="underline mr-4 hover:text-dark">LinkedIn</a>
           <a href="https://github.com/omnyx2" target="_blank" rel="noopener noreferrer" className="underline hover:text-dark">GitHub</a>
         </footer>
+        </div>
       </div>
     </div>
   )

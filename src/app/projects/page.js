@@ -130,10 +130,10 @@ export default function Portfolio() {
       </div>
 
       {/* the long paper is pulled across the desk as you scroll */}
-      <div className="relative z-10 py-12 sm:py-20">
-        <div className="relative max-w-2xl mx-auto bg-notebookPage shadow-custom rounded-[2px] px-8 sm:px-14 py-12">
+      <div className="relative z-10 py-8 sm:py-20">
+        <div className="relative max-w-2xl mx-4 sm:mx-auto bg-notebookPage shadow-custom rounded-[2px] px-6 sm:px-14 py-10 sm:py-12">
           {/* notebook margin line */}
-          <div className="absolute top-0 left-6 sm:left-10 h-full w-[1px] bg-orange/30" />
+          <div className="absolute top-0 left-4 sm:left-10 h-full w-[1px] bg-orange/30" />
 
         <header>
           <Link href="/" className="font-notoserif text-sm text-dark/60 hover:text-dark">← Home</Link>

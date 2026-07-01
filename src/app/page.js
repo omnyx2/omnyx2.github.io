@@ -49,7 +49,7 @@ export default function Home() {
         Manage By,
         Ryu, Hyun Seok
       </div>
-       <div className="flex flex-row items-center justify-between responsive-screen-padding">
+       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 responsive-screen-padding">
      <Book title={"Tech Stack"} lineType={"squared"} color={"bg-nccs"} subtitle={"To Be Realiable"} toUrl={"stack"}/>
      <Book title={"My CV"} lineType={"ruled"} color={"bg-black"}subtitle={"Work hard"} toUrl={"cv"}/>
      <Book title={"Projects"} lineType={"dotted"} color={"bg-ncct"} subtitle={"Make Result"} toUrl={"projects"}/>
