@@ -224,3 +224,14 @@ body {
 
 @layer responsive-paper-size{
 }
+
+/* tiled, repeating rotating background */
+@keyframes bgspin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.bg-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(240px, 1fr));
+}
