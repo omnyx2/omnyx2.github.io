@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import PaperScroll from '../PaperScroll'
+import MatBackground from '../MatBackground'
 
 const intro = `I first set out to become a senior backend engineer who could ship good services, and along the way I studied a wide range of tools — from commercial software to developer tooling such as Docker and React. Yet the more I learned, the more I felt I was only growing familiar rather than growing deeper. Returning to school and studying mathematics filled that gap: I saw how central mathematical thinking and design are to understanding the world. I now want to build on mathematics, logic, and imagination — connecting abstract reasoning with concrete implementation — to become a researcher and practitioner who understands modern systems end to end.`
 
@@ -124,15 +125,12 @@ export default function Portfolio() {
   return (
     // fixed-height screen — the window itself never scrolls, only the paper does
     <div className="relative h-screen w-full overflow-hidden font-main text-dark">
-      {/* fixed wooden desk patch sitting over the homepage background */}
-      <div className="wood-desk fixed top-0 bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] z-0" aria-hidden="true">
-        <div className="desk-slot-top absolute top-0 left-0 w-full h-16" />
-        <div className="desk-slot-bottom absolute bottom-0 left-0 w-full h-16" />
-      </div>
+      {/* full-screen desk mat with a sage/blue toggle */}
+      <MatBackground />
 
-      {/* the desk stays put; only this sheet (the résumé) scrolls */}
+      {/* the mat stays put; only this sheet (the résumé) scrolls */}
       <div className="relative z-10 h-full flex justify-center py-6 sm:py-12">
-        <div className="relative w-full max-w-2xl mx-4 sm:mx-auto bg-notebookPage shadow-custom rounded-[2px] overflow-hidden">
+        <div className="relative w-full max-w-3xl mx-4 sm:mx-auto bg-notebookPage shadow-custom rounded-[2px] overflow-hidden">
           {/* notebook margin line */}
           <div className="absolute top-0 left-6 sm:left-14 h-full w-[1px] bg-orange/30 z-10" />
           <PaperScroll className="paper-sheet h-full overflow-y-auto px-10 sm:px-24 py-10 sm:py-12">

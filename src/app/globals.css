@@ -225,6 +225,19 @@ body {
 @layer responsive-paper-size{
 }
 
+/* desk mats behind the paper (toggle between the two) */
+.mat-sage {
+  background:
+    radial-gradient(75% 75% at 50% 50%, rgba(0,0,0,0) 58%, rgba(0,0,0,0.22) 100%),
+    radial-gradient(85% 85% at 50% 36%, #c4d5bf 0%, #a7c0a0 58%, #87a380 100%);
+}
+.mat-blue {
+  background:
+    radial-gradient(78% 78% at 50% 55%, rgba(0,0,0,0) 52%, rgba(0,0,0,0.38) 100%),
+    radial-gradient(60% 55% at 50% 16%, rgba(97,116,160,0.55) 0%, rgba(97,116,160,0) 100%),
+    linear-gradient(160deg, #34415f 0%, #222b43 100%);
+}
+
 /* paper sheet: cream base + subtle fiber/speckle grain that moves with the sheet */
 .paper-sheet {
   background-color: #fbfae8;
