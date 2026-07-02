@@ -225,6 +225,15 @@ body {
 @layer responsive-paper-size{
 }
 
+/* paper sheet: cream base + subtle fiber/speckle grain that moves with the sheet */
+.paper-sheet {
+  background-color: #fbfae8;
+  background-image: url('/image/paper.svg');
+  background-size: 240px 240px;
+  background-repeat: repeat;
+  background-attachment: local;
+}
+
 /* hide scrollbar but keep scrolling (for the drag-to-pull paper) */
 .no-scrollbar {
   scrollbar-width: none;        /* Firefox */

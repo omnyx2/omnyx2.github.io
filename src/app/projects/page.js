@@ -134,8 +134,8 @@ export default function Portfolio() {
       <div className="relative z-10 h-full flex justify-center py-6 sm:py-12">
         <div className="relative w-full max-w-2xl mx-4 sm:mx-auto bg-notebookPage shadow-custom rounded-[2px] overflow-hidden">
           {/* notebook margin line */}
-          <div className="absolute top-0 left-4 sm:left-10 h-full w-[1px] bg-orange/30 z-10" />
-          <PaperScroll className="h-full overflow-y-auto px-6 sm:px-14 py-10 sm:py-12">
+          <div className="absolute top-0 left-6 sm:left-14 h-full w-[1px] bg-orange/30 z-10" />
+          <PaperScroll className="paper-sheet h-full overflow-y-auto px-10 sm:px-24 py-10 sm:py-12">
 
         <header>
           <Link href="/" className="font-notoserif text-sm text-dark/60 hover:text-dark">← Home</Link>
