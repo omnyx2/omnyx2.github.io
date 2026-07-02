@@ -224,3 +224,12 @@ body {
 
 @layer responsive-paper-size{
 }
+
+/* hide scrollbar but keep scrolling (for the drag-to-pull paper) */
+.no-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}

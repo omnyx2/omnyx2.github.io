@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PaperScroll from '../PaperScroll'
 
 const intro = `I first set out to become a senior backend engineer who could ship good services, and along the way I studied a wide range of tools — from commercial software to developer tooling such as Docker and React. Yet the more I learned, the more I felt I was only growing familiar rather than growing deeper. Returning to school and studying mathematics filled that gap: I saw how central mathematical thinking and design are to understanding the world. I now want to build on mathematics, logic, and imagination — connecting abstract reasoning with concrete implementation — to become a researcher and practitioner who understands modern systems end to end.`
 
@@ -134,7 +135,7 @@ export default function Portfolio() {
         <div className="relative w-full max-w-2xl mx-4 sm:mx-auto bg-notebookPage shadow-custom rounded-[2px] overflow-hidden">
           {/* notebook margin line */}
           <div className="absolute top-0 left-4 sm:left-10 h-full w-[1px] bg-orange/30 z-10" />
-          <div className="h-full overflow-y-auto px-6 sm:px-14 py-10 sm:py-12">
+          <PaperScroll className="h-full overflow-y-auto px-6 sm:px-14 py-10 sm:py-12">
 
         <header>
           <Link href="/" className="font-notoserif text-sm text-dark/60 hover:text-dark">← Home</Link>
@@ -191,7 +192,7 @@ export default function Portfolio() {
           <a href="https://www.linkedin.com/in/hyunseok-ryu-376534170/" target="_blank" rel="noopener noreferrer" className="underline mr-4 hover:text-dark">LinkedIn</a>
           <a href="https://github.com/omnyx2" target="_blank" rel="noopener noreferrer" className="underline hover:text-dark">GitHub</a>
         </footer>
-          </div>
+          </PaperScroll>
         </div>
       </div>
     </div>
